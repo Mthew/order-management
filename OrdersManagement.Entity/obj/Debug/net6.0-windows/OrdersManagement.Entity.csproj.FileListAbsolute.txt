@@ -1,0 +1,14 @@
+C:\Users\DESARROLLO4\Documents\SourceCode\Orders\OrdersManagement\OrdersManagement.Entity\bin\Debug\net6.0-windows\OrdersManagement.Entity.deps.json
+C:\Users\DESARROLLO4\Documents\SourceCode\Orders\OrdersManagement\OrdersManagement.Entity\bin\Debug\net6.0-windows\OrdersManagement.Entity.runtimeconfig.json
+C:\Users\DESARROLLO4\Documents\SourceCode\Orders\OrdersManagement\OrdersManagement.Entity\bin\Debug\net6.0-windows\OrdersManagement.Entity.dll
+C:\Users\DESARROLLO4\Documents\SourceCode\Orders\OrdersManagement\OrdersManagement.Entity\bin\Debug\net6.0-windows\OrdersManagement.Entity.pdb
+C:\Users\DESARROLLO4\Documents\SourceCode\Orders\OrdersManagement\OrdersManagement.Entity\obj\Debug\net6.0-windows\OrdersManagement.Entity.csproj.AssemblyReference.cache
+C:\Users\DESARROLLO4\Documents\SourceCode\Orders\OrdersManagement\OrdersManagement.Entity\obj\Debug\net6.0-windows\OrdersManagement.Entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DESARROLLO4\Documents\SourceCode\Orders\OrdersManagement\OrdersManagement.Entity\obj\Debug\net6.0-windows\OrdersManagement.Entity.AssemblyInfoInputs.cache
+C:\Users\DESARROLLO4\Documents\SourceCode\Orders\OrdersManagement\OrdersManagement.Entity\obj\Debug\net6.0-windows\OrdersManagement.Entity.AssemblyInfo.cs
+C:\Users\DESARROLLO4\Documents\SourceCode\Orders\OrdersManagement\OrdersManagement.Entity\obj\Debug\net6.0-windows\OrdersManagement.Entity.csproj.CoreCompileInputs.cache
+C:\Users\DESARROLLO4\Documents\SourceCode\Orders\OrdersManagement\OrdersManagement.Entity\obj\Debug\net6.0-windows\OrdersManagement.Entity.dll
+C:\Users\DESARROLLO4\Documents\SourceCode\Orders\OrdersManagement\OrdersManagement.Entity\obj\Debug\net6.0-windows\refint\OrdersManagement.Entity.dll
+C:\Users\DESARROLLO4\Documents\SourceCode\Orders\OrdersManagement\OrdersManagement.Entity\obj\Debug\net6.0-windows\OrdersManagement.Entity.pdb
+C:\Users\DESARROLLO4\Documents\SourceCode\Orders\OrdersManagement\OrdersManagement.Entity\obj\Debug\net6.0-windows\OrdersManagement.Entity.genruntimeconfig.cache
+C:\Users\DESARROLLO4\Documents\SourceCode\Orders\OrdersManagement\OrdersManagement.Entity\obj\Debug\net6.0-windows\ref\OrdersManagement.Entity.dll
