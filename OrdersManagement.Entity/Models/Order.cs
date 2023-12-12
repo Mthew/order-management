@@ -11,6 +11,8 @@ public partial class Order
 
     public string OmNumber { get; set; } = null!;
 
+    public string CampaignNumber { get; set; } = null!;
+
     public string Generic { get; set; } = null!;
 
     public int OrderState { get; set; }

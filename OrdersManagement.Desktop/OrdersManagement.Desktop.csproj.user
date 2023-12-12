@@ -7,8 +7,16 @@
     <Compile Update="frmOrder.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="frmProgrammingLabel.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Orders.cs">
       <SubType>Form</SubType>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="ProgrammingDataSet.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
 </Project>

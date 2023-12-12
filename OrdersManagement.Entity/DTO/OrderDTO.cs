@@ -19,6 +19,8 @@
 
         public int OrderState { get; set; }
 
+        public string CampaignNumber { get; set; } = null!;
+
         public DateTime? CreatedAt { get; set; }
 
         public List<OrderDetailDTO> Details { get; set; } = null!;

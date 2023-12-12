@@ -98,6 +98,7 @@ namespace OrdersManagement.Desktop
             order.Generic = txtGeneric.Text;
             order.OrderState = OrderStateDTO.NEW;
             order.Details = details;
+            order.CampaignNumber = txtCampaingNumber.Text;
 
             OrderRepository Repo = new OrderRepository();
             Repo.Create(order);

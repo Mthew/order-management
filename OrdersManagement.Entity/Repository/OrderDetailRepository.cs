@@ -7,7 +7,29 @@ namespace OrdersManagement.Entity.Repository
     {
         #region GET
 
-       
+        public OrderDetailToPrintDTO GetById(int orderID)
+        {
+            using (DbOrdersContext db = new DbOrdersContext())
+            {
+                return (from o in db.Orders
+                        join od in db.OrderDetails on o.Id equals od.OrderId
+                        where od.Id.Equals(orderID)
+                        select new OrderDetailToPrintDTO()
+                        {
+                            Id = o.Id,
+                            CampaignNumber = o.CampaignNumber,
+                            OrderNumber = o.OrderNumber,
+                            OmNumber = o.OmNumber,
+                            Generic = o.Generic,
+                            Variant = od.Variant,
+                            ConfirmedQuantity = (int)od.ConfirmedQuantity!,
+                            Size = od.Size,
+                            ColorCode = od.ColorCode,
+                            BarCode = od.BarCode,
+                        }).FirstOrDefault()!;
+            }
+        }
+
 
         #endregion
 
@@ -26,7 +48,7 @@ namespace OrdersManagement.Entity.Repository
 
                 if (item == null)
                 {
-                    throw new Exception("Item not found");
+                    throw new Exception($"El código de barras {barcode}, no se encuntra ingresado en esta programación");
                 }
 
                 item.ConfirmedQuantity += quantity;
@@ -38,7 +60,7 @@ namespace OrdersManagement.Entity.Repository
         #endregion
 
         #region DELETE
-        
+
         #endregion
 
         #region Private methods

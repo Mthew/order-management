@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Body>
+    <ReportItems>
+      <Textbox Name="txtCampaign">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value />
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <Top>0.9017cm</Top>
+        <Left>1.1557cm</Left>
+        <Height>0.5365cm</Height>
+        <Width>1.31467cm</Width>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="txtOrderNumber">
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!orderNumber.Value, "DataSet1")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <Top>0.9017cm</Top>
+        <Left>4.07342cm</Left>
+        <Height>0.5365cm</Height>
+        <Width>1.69567cm</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="txtFactura">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value />
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <Top>0.9017cm</Top>
+        <Left>7.01558cm</Left>
+        <Height>0.5365cm</Height>
+        <Width>1.46284cm</Width>
+        <ZIndex>2</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="txtConfirmedQuantity">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!confirmedQuantity.Value, "DataSet1")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <Top>1.9225cm</Top>
+        <Left>7.01558cm</Left>
+        <Height>0.5365cm</Height>
+        <Width>1.46284cm</Width>
+        <ZIndex>3</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="txtVariant">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!variant.Value, "DataSet1")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <Top>1.9225cm</Top>
+        <Left>4.07342cm</Left>
+        <Height>0.5365cm</Height>
+        <Width>1.69567cm</Width>
+        <ZIndex>4</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="txtGeneric">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!generic.Value, "DataSet1")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <Top>1.9225cm</Top>
+        <Left>1.1557cm</Left>
+        <Height>0.5365cm</Height>
+        <Width>1.31467cm</Width>
+        <ZIndex>5</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="txtBoxNumber">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value />
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <Top>2.95967cm</Top>
+        <Left>7.01558cm</Left>
+        <Height>0.5365cm</Height>
+        <Width>1.46284cm</Width>
+        <ZIndex>6</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="txtColor">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!color.Value, "DataSet1")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <Top>2.95967cm</Top>
+        <Left>4.07342cm</Left>
+        <Height>0.5365cm</Height>
+        <Width>1.69567cm</Width>
+        <ZIndex>7</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="txtSize">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!size.Value, "DataSet1")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <Top>2.95967cm</Top>
+        <Left>1.1557cm</Left>
+        <Height>0.5365cm</Height>
+        <Width>1.31467cm</Width>
+        <ZIndex>8</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="txtBarCode">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!barCode.Value, "DataSet1")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <Top>3.9545cm</Top>
+        <Left>7.01558cm</Left>
+        <Height>0.5365cm</Height>
+        <Width>1.46284cm</Width>
+        <ZIndex>9</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="txtExpiredTime">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value />
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <Top>3.9545cm</Top>
+        <Left>4.07342cm</Left>
+        <Height>0.5365cm</Height>
+        <Width>1.69567cm</Width>
+        <ZIndex>10</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="txtLote">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value />
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <Top>3.9545cm</Top>
+        <Left>1.1557cm</Left>
+        <Height>0.5365cm</Height>
+        <Width>1.31467cm</Width>
+        <ZIndex>11</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="txtSKU">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!SKU.Value, "DataSet1")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <Top>4.92817cm</Top>
+        <Left>7.01558cm</Left>
+        <Height>0.5365cm</Height>
+        <Width>1.46284cm</Width>
+        <ZIndex>12</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="txtExternalQualityDoc">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value />
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <Top>4.92817cm</Top>
+        <Left>2.52825cm</Left>
+        <Height>0.5365cm</Height>
+        <Width>3.24084cm</Width>
+        <ZIndex>13</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+    </ReportItems>
+    <Height>2.275in</Height>
+    <Style />
+  </Body>
+  <Width>3.45833in</Width>
+  <Page>
+    <PageHeight>29.7cm</PageHeight>
+    <PageWidth>21cm</PageWidth>
+    <LeftMargin>2cm</LeftMargin>
+    <RightMargin>2cm</RightMargin>
+    <TopMargin>2cm</TopMargin>
+    <BottomMargin>2cm</BottomMargin>
+    <ColumnSpacing>0.13cm</ColumnSpacing>
+    <Style />
+  </Page>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="ProgrammingDataSet">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>c1265756-1699-4315-a816-0ed63ba2cad5</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="DataSet1">
+      <Query>
+        <DataSourceName>ProgrammingDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="id">
+          <DataField>id</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="barCode">
+          <DataField>barCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SKU">
+          <DataField>SKU</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ofNumber">
+          <DataField>ofNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="color">
+          <DataField>color</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="colorCode">
+          <DataField>colorCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="variant">
+          <DataField>variant</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="size">
+          <DataField>size</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="umQuantity">
+          <DataField>umQuantity</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="realQuantity">
+          <DataField>realQuantity</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="confirmedQuantity">
+          <DataField>confirmedQuantity</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="orderId">
+          <DataField>orderId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="orderNumber">
+          <DataField>orderNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="omNumber">
+          <DataField>omNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="generic">
+          <DataField>generic</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="orderState">
+          <DataField>orderState</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="created_at">
+          <DataField>created_at</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>ProgrammingDataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\ASUS\Documents\SourceCode\order-management\OrdersManagement.Desktop\ProgrammingDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>DataTable1</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>DataTable1TableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <EmbeddedImages>
+    <EmbeddedImage Name="ROTULO">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
+  <rd:ReportID>5f10a5a5-7976-4bec-8e03-ec70a2fa6e93</rd:ReportID>
+</Report>

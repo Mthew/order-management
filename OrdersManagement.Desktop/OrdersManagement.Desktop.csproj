@@ -9,7 +9,34 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="ReportDefinitions\LabelReport.rdlc" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="ReportDefinitions\LabelReport.rdlc" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ReportViewerCore.WinForms" Version="15.1.19" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\OrdersManagement.Entity\OrdersManagement.Entity.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="ProgrammingDataSet.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ProgrammingDataSet.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="ProgrammingDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProgrammingDataSet.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
 
 </Project>

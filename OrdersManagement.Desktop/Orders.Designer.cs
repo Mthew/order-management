@@ -28,243 +28,250 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtSearcher = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OrderNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OmNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Generic = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OrderState = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CreatedAt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Actions = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.SuspendLayout();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            label1 = new Label();
+            txtSearcher = new TextBox();
+            panel1 = new Panel();
+            button1 = new Button();
+            label2 = new Label();
+            panel2 = new Panel();
+            dataGridView1 = new DataGridView();
+            Id = new DataGridViewTextBoxColumn();
+            OrderNumber = new DataGridViewTextBoxColumn();
+            OmNumber = new DataGridViewTextBoxColumn();
+            Generic = new DataGridViewTextBoxColumn();
+            OrderState = new DataGridViewTextBoxColumn();
+            CreatedAt = new DataGridViewTextBoxColumn();
+            Actions = new DataGridViewButtonColumn();
+            button2 = new Button();
+            label3 = new Label();
+            panel1.SuspendLayout();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Cursor = System.Windows.Forms.Cursors.No;
-            this.label1.Font = new System.Drawing.Font("Engravers MT", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(162, 28);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Pedidos";
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Cursor = Cursors.No;
+            label1.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.Black;
+            label1.Location = new Point(12, 9);
+            label1.Name = "label1";
+            label1.Size = new Size(311, 37);
+            label1.TabIndex = 0;
+            label1.Text = "TODOS LOS PEDIDOS";
             // 
             // txtSearcher
             // 
-            this.txtSearcher.Location = new System.Drawing.Point(24, 56);
-            this.txtSearcher.Name = "txtSearcher";
-            this.txtSearcher.Size = new System.Drawing.Size(609, 23);
-            this.txtSearcher.TabIndex = 1;
+            txtSearcher.Location = new Point(24, 56);
+            txtSearcher.Name = "txtSearcher";
+            txtSearcher.Size = new Size(690, 27);
+            txtSearcher.TabIndex = 1;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.txtSearcher);
-            this.panel1.Location = new System.Drawing.Point(12, 50);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(776, 100);
-            this.panel1.TabIndex = 2;
+            panel1.BackColor = SystemColors.ButtonHighlight;
+            panel1.Controls.Add(button1);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(txtSearcher);
+            panel1.Location = new Point(12, 50);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(854, 100);
+            panel1.TabIndex = 2;
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(648, 51);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(3);
-            this.button1.Size = new System.Drawing.Size(110, 30);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Buscar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            button1.BackColor = SystemColors.MenuHighlight;
+            button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(720, 53);
+            button1.Name = "button1";
+            button1.Padding = new Padding(3);
+            button1.Size = new Size(110, 30);
+            button1.TabIndex = 3;
+            button1.Text = "Buscar";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 26);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 15);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Buscar pedido";
+            label2.AutoSize = true;
+            label2.Location = new Point(24, 26);
+            label2.Name = "label2";
+            label2.Size = new Size(104, 20);
+            label2.TabIndex = 2;
+            label2.Text = "Buscar pedido";
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel2.Controls.Add(this.dataGridView1);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(12, 156);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(776, 290);
-            this.panel2.TabIndex = 4;
+            panel2.BackColor = SystemColors.ButtonHighlight;
+            panel2.Controls.Add(dataGridView1);
+            panel2.Controls.Add(button2);
+            panel2.Controls.Add(label3);
+            panel2.Location = new Point(12, 156);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(854, 290);
+            panel2.TabIndex = 4;
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id,
-            this.OrderNumber,
-            this.OmNumber,
-            this.Generic,
-            this.OrderState,
-            this.CreatedAt,
-            this.Actions});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.Location = new System.Drawing.Point(24, 51);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(734, 212);
-            this.dataGridView1.TabIndex = 4;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Control;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Id, OrderNumber, OmNumber, Generic, OrderState, CreatedAt, Actions });
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = SystemColors.Window;
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridView1.Location = new Point(24, 51);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = SystemColors.Control;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle6.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
+            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.Size = new Size(806, 212);
+            dataGridView1.TabIndex = 4;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // Id
             // 
-            this.Id.DataPropertyName = "Id";
-            this.Id.Frozen = true;
-            this.Id.HeaderText = "identificador";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Visible = false;
+            Id.DataPropertyName = "Id";
+            Id.Frozen = true;
+            Id.HeaderText = "identificador";
+            Id.MinimumWidth = 6;
+            Id.Name = "Id";
+            Id.ReadOnly = true;
+            Id.Visible = false;
+            Id.Width = 125;
             // 
             // OrderNumber
             // 
-            this.OrderNumber.DataPropertyName = "OrderNumber";
-            this.OrderNumber.Frozen = true;
-            this.OrderNumber.HeaderText = "Número de Pedido";
-            this.OrderNumber.Name = "OrderNumber";
-            this.OrderNumber.ReadOnly = true;
+            OrderNumber.DataPropertyName = "OrderNumber";
+            OrderNumber.Frozen = true;
+            OrderNumber.HeaderText = "Número de Pedido";
+            OrderNumber.MinimumWidth = 6;
+            OrderNumber.Name = "OrderNumber";
+            OrderNumber.ReadOnly = true;
+            OrderNumber.Width = 125;
             // 
             // OmNumber
             // 
-            this.OmNumber.DataPropertyName = "OmNumber";
-            this.OmNumber.Frozen = true;
-            this.OmNumber.HeaderText = "No. de Orden (OM)";
-            this.OmNumber.Name = "OmNumber";
-            this.OmNumber.ReadOnly = true;
+            OmNumber.DataPropertyName = "OmNumber";
+            OmNumber.Frozen = true;
+            OmNumber.HeaderText = "No. de Orden (OM)";
+            OmNumber.MinimumWidth = 6;
+            OmNumber.Name = "OmNumber";
+            OmNumber.ReadOnly = true;
+            OmNumber.Width = 125;
             // 
             // Generic
             // 
-            this.Generic.DataPropertyName = "Generic";
-            this.Generic.Frozen = true;
-            this.Generic.HeaderText = "Generico";
-            this.Generic.Name = "Generic";
-            this.Generic.ReadOnly = true;
+            Generic.DataPropertyName = "Generic";
+            Generic.Frozen = true;
+            Generic.HeaderText = "Generico";
+            Generic.MinimumWidth = 6;
+            Generic.Name = "Generic";
+            Generic.ReadOnly = true;
+            Generic.Width = 125;
             // 
             // OrderState
             // 
-            this.OrderState.DataPropertyName = "OrderState";
-            this.OrderState.Frozen = true;
-            this.OrderState.HeaderText = "Estado";
-            this.OrderState.Name = "OrderState";
-            this.OrderState.ReadOnly = true;
-            this.OrderState.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            OrderState.DataPropertyName = "OrderState";
+            OrderState.Frozen = true;
+            OrderState.HeaderText = "Estado";
+            OrderState.MinimumWidth = 6;
+            OrderState.Name = "OrderState";
+            OrderState.ReadOnly = true;
+            OrderState.Resizable = DataGridViewTriState.True;
+            OrderState.Width = 125;
             // 
             // CreatedAt
             // 
-            this.CreatedAt.DataPropertyName = "CreatedAt";
-            this.CreatedAt.Frozen = true;
-            this.CreatedAt.HeaderText = "Fecha de Creación";
-            this.CreatedAt.Name = "CreatedAt";
-            this.CreatedAt.ReadOnly = true;
+            CreatedAt.DataPropertyName = "CreatedAt";
+            CreatedAt.Frozen = true;
+            CreatedAt.HeaderText = "Fecha de Creación";
+            CreatedAt.MinimumWidth = 6;
+            CreatedAt.Name = "CreatedAt";
+            CreatedAt.ReadOnly = true;
+            CreatedAt.Width = 125;
             // 
             // Actions
             // 
-            this.Actions.Frozen = true;
-            this.Actions.HeaderText = "Acciones";
-            this.Actions.Name = "Actions";
-            this.Actions.ReadOnly = true;
-            this.Actions.Text = "Confirmar";
-            this.Actions.UseColumnTextForButtonValue = true;
+            Actions.Frozen = true;
+            Actions.HeaderText = "Acciones";
+            Actions.MinimumWidth = 6;
+            Actions.Name = "Actions";
+            Actions.ReadOnly = true;
+            Actions.Text = "Confirmar";
+            Actions.UseColumnTextForButtonValue = true;
+            Actions.Width = 125;
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(648, 15);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(3);
-            this.button2.Size = new System.Drawing.Size(110, 30);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Crear Pedido";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            button2.BackColor = SystemColors.MenuHighlight;
+            button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.ForeColor = Color.White;
+            button2.Location = new Point(720, 15);
+            button2.Name = "button2";
+            button2.Padding = new Padding(3);
+            button2.Size = new Size(110, 30);
+            button2.TabIndex = 3;
+            button2.Text = "Crear Pedido";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(24, 15);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 15);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Pedidos";
+            label3.AutoSize = true;
+            label3.Location = new Point(24, 15);
+            label3.Name = "label3";
+            label3.Size = new Size(61, 20);
+            label3.TabIndex = 2;
+            label3.Text = "Pedidos";
             // 
             // Orders
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label1);
-            this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ForeColor = System.Drawing.Color.Black;
-            this.Name = "Orders";
-            this.Text = "Orders";
-            this.Load += new System.EventHandler(this.Orders_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(879, 450);
+            Controls.Add(panel2);
+            Controls.Add(panel1);
+            Controls.Add(label1);
+            Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            ForeColor = Color.Black;
+            Name = "Orders";
+            Text = "Orders";
+            Load += Orders_Load;
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

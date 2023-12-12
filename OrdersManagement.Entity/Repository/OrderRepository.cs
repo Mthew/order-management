@@ -29,6 +29,7 @@ namespace OrdersManagement.Entity.Repository
                     Generic = x.Generic,
                     OrderState = x.OrderState,
                     CreatedAt = x.CreatedAt,
+                    CampaignNumber = x.CampaignNumber,
                     Details = x.OrderDetails.Select(d => new OrderDetailDTO()
                     {
                         Id = d.Id,
@@ -69,6 +70,7 @@ namespace OrdersManagement.Entity.Repository
                 order.OmNumber = dto.OmNumber;
                 order.Generic = dto.Generic;
                 order.OrderState = dto.OrderState;
+                order.CampaignNumber = dto.CampaignNumber;
 
                 db.Orders.Add(order);
                 db.SaveChanges();
@@ -99,6 +101,7 @@ namespace OrdersManagement.Entity.Repository
                 order.OmNumber = dto.OmNumber;
                 order.Generic = dto.Generic;
                 order.OrderState = dto.OrderState;
+                order.CampaignNumber = dto.CampaignNumber;
 
                 this.AddDetails(db, order.Id, dto.Details);
             }
@@ -160,6 +163,7 @@ namespace OrdersManagement.Entity.Repository
                 Generic = x.Generic,
                 OrderState = x.OrderState,
                 CreatedAt = x.CreatedAt,
+                CampaignNumber = x.CampaignNumber,  
             };
         }
         #endregion
