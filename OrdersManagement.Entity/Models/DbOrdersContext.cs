@@ -83,11 +83,21 @@ public partial class DbOrdersContext : DbContext
             entity.Property(e => e.ConfirmedQuantity)
                 .HasDefaultValueSql("((0))")
                 .HasColumnName("confirmedQuantity");
+            entity.Property(e => e.Description)
+                .HasMaxLength(255)
+                .IsUnicode(false)
+                .HasColumnName("description");
             entity.Property(e => e.OfNumber)
                 .HasMaxLength(100)
                 .IsUnicode(false)
                 .HasColumnName("ofNumber");
             entity.Property(e => e.OrderId).HasColumnName("orderId");
+            entity.Property(e => e.Price)
+                .HasColumnType("decimal(18, 2)")
+                .HasColumnName("price");
+            entity.Property(e => e.PrintedQuantity)
+                .HasDefaultValueSql("((0))")
+                .HasColumnName("printedQuantity");
             entity.Property(e => e.RealQuantity).HasColumnName("realQuantity");
             entity.Property(e => e.Size)
                 .HasMaxLength(25)

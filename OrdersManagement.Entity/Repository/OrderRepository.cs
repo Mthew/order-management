@@ -37,12 +37,14 @@ namespace OrdersManagement.Entity.Repository
                         BarCode = d.BarCode,
                         Sku = d.Sku,
                         Color = d.Color,
+                        ColorCode = d.ColorCode,
                         Variant = d.Variant,
                         Size = d.Size,
                         UmQuantity = d.UmQuantity,
                         RealQuantity = d.RealQuantity,
                         OfNumber = d.OfNumber,
                         ConfirmedQuantity = (int)d.ConfirmedQuantity!,
+                        PrintedQuantity = (int)d.PrintedQuantity!,
                     }).ToList()
                 }).FirstOrDefault()!;
             }

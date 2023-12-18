@@ -6,8 +6,9 @@ USE db_orders;
 
 CREATE TABLE orders (
 	 id int identity(1,1) primary key,
-	 orderNumber varchar(100) NOT NULL unique,
+	 orderNumber varchar(100) NOT NULL unique,	 
 	 omNumber varchar(100) NOT NULL unique,
+	 campaignNumber varchar(100) NOT NULL,
 	 generic varchar(100) NOT NULL,
 	 orderState int NOT NULL,
 	 created_at smalldatetime default getdate()
@@ -33,12 +34,16 @@ CREATE TABLE orderDetails (
 
 
 
-INSERT INTO orders(orderNumber, omNumber, generic, orderState) VALUES('4500088101','127901','25001368','0');
+INSERT INTO orders(orderNumber, omNumber, generic, orderState, campaignNumber) VALUES('4500088101','127901','25001368','0', '2023/08/NM');
 
 INSERT INTO orderDetails(orderId, barCode, SKU, ofNumber, color, colorCode, variant, size, umQuantity, realQuantity) VALUES
-(2, '7703794910007', '677371', '10415694', 'PALO DE ROSA', 'pro_233', '25001368017', 'S', '51', '45'),
-(2, '7703794910014', '677372', '10415695', 'PALO DE ROSA', 'pro_233', '25001368018', 'M', '102', '88');
+(1, '7703794910007', '677371', '10415694', 'PALO DE ROSA', 'pro_233', '25001368017', 'S', '51', '45'),
+(1, '7703794910014', '677372', '10415695', 'PALO DE ROSA', 'pro_233', '25001368018', 'M', '102', '88');
 
+
+SELECT * FROM orderDetails od
+	INNER JOIN orders o ON od.orderId = o.id
+WHERE od.id = 1
 
  --public string OrderNumber { get; set; } = null!;
 

@@ -20,8 +20,8 @@ namespace OrdersManagement.Desktop
         OrderRepository Repository;
         OrderDTO currentOrder;
         int detailOrderID = 0;
-        int totalPages = 0;
-        int currentPage = 0;
+        int quantityToPrint = 0;
+        int quantityPrinted = 0;
 
 
         public frmConfirmOrder(int? orderID)
@@ -103,7 +103,8 @@ namespace OrdersManagement.Desktop
 
             var detailOrder = currentOrder.Details.FirstOrDefault(x => x.Id.Equals(detailOrderId));
 
-            if (detailOrder == null) {
+            if (detailOrder == null)
+            {
                 MessageBox.Show("Sucedio un error mientras se imprimia");
                 RestoreValues();
                 return;
@@ -111,15 +112,19 @@ namespace OrdersManagement.Desktop
 
             lblVariant.Text = detailOrder.Variant;
             lblQuantity.Text = detailOrder.ConfirmedQuantity.ToString();
+            lblPrintedQuantity.Text = detailOrder.PrintedQuantity.ToString();
             lblSize.Text = detailOrder.Size.ToString();
             lblColor.Text = detailOrder.ColorCode;
             lblBarCode.Text = detailOrder.BarCode;
             lblSKU.Text = detailOrder.Sku;
+            lblRealQuantity.Text = detailOrder.RealQuantity.ToString();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            // imprimir fatura
+            frmProgrammingLabel form = new frmProgrammingLabel(currentOrder.Id);
+            form.Show();
+            this.Hide();
         }
 
         private void setCurrentOrder(int? orderID)
@@ -159,7 +164,7 @@ namespace OrdersManagement.Desktop
                 lblStatus.Text = "Actualizando la cantidad del producto...";
 
                 OrderDetailRepository DetailRepo = new OrderDetailRepository();
-                DetailRepo.AddQuantity(txtBarCode.Text, 1);
+                DetailRepo.AddQuantity(currentOrder.Id, txtBarCode.Text, 1);
 
                 setCurrentOrder(currentOrder.Id);
                 updateGrid();
@@ -236,16 +241,16 @@ namespace OrdersManagement.Desktop
             e.Graphics.DrawString(currentOrder.Generic, font, black, new RectangleF(440, 85 + aumentoY, heigthBox, 85), drawFormat);
 
             //Variante
-            e.Graphics.DrawString(detailOrder.Variant, font, black, new RectangleF(440, 280 + aumentoY, heigthBox, 110), drawFormat);
+            e.Graphics.DrawString(detailOrder!.Variant, font, black, new RectangleF(440, 280 + aumentoY, heigthBox, 110), drawFormat);
 
-            //Catidad
-            e.Graphics.DrawString(detailOrder.ConfirmedQuantity.ToString(), font, black, new RectangleF(440, 455 + aumentoY, heigthBox, 90), drawFormat);
+            //Cantidad
+            e.Graphics.DrawString(detailOrder!.ConfirmedQuantity.ToString(), font, black, new RectangleF(440, 455 + aumentoY, heigthBox, 90), drawFormat);
 
             //Talla
-            e.Graphics.DrawString(detailOrder.Size, font, black, new RectangleF(375, 85 + aumentoY, heigthBox, 85), drawFormat);
+            e.Graphics.DrawString(detailOrder!.Size, font, black, new RectangleF(375, 85 + aumentoY, heigthBox, 85), drawFormat);
 
             //Color
-            e.Graphics.DrawString(detailOrder.ColorCode, font, black, new RectangleF(375, 280 + aumentoY, heigthBox, 110), drawFormat);
+            e.Graphics.DrawString(detailOrder!.ColorCode, font, black, new RectangleF(375, 280 + aumentoY, heigthBox, 110), drawFormat);
 
             ////#Caja
             //e.Graphics.DrawString("1", font, black, new RectangleF(375, 455 + aumentoY, heigthBox, 90), drawFormat);
@@ -257,7 +262,7 @@ namespace OrdersManagement.Desktop
             //e.Graphics.DrawString(DateTime.Now.ToShortDateString(), font, black, new RectangleF(315, 280 + aumentoY, heigthBox, 110), drawFormat);
 
             //Código de barras
-            e.Graphics.DrawString(detailOrder.BarCode, font, black, new RectangleF(315, 455 + aumentoY, heigthBox, 90), drawFormat);
+            //e.Graphics.DrawString(detailOrder.BarCode, font, black, new RectangleF(315, 455 + aumentoY, heigthBox, 90), drawFormat);
 
             //# DOC CALIDAD EXTERNA
             //e.Graphics.DrawString("DOC CALIDAD", font, black, new RectangleF(240, 165 + aumentoY, heigthBox, 215), drawFormat);
@@ -265,7 +270,18 @@ namespace OrdersManagement.Desktop
             //# sku
             e.Graphics.DrawString(detailOrder.Sku, font, black, new RectangleF(240, 455 + aumentoY, heigthBox, 90), drawFormat);
 
+            //e.HasMorePages = false;
+            RestoreValues();
+            MessageBox.Show("Preparando impresión de rotulos...");
 
+            //Actualizar cantidad impresa en base de datos;
+
+            OrderDetailRepository DetailRepo = new OrderDetailRepository();
+            DetailRepo.AddQuantityPrinted(currentOrder.Id, detailOrder.BarCode);
+            detailOrder.PrintedQuantity += detailOrder.ConfirmedQuantity;
+            detailOrder.ConfirmedQuantity = 0;
+            updateGrid();
+            return;
 
             //////horizontal
             /////const float heigthBox = 40, aumentoY = 15;
@@ -310,27 +326,12 @@ namespace OrdersManagement.Desktop
 
             ////# sku
             //e.Graphics.DrawString("SKU", font, black, new RectangleF(580, 340 + aumentoY, 90, heigthBox));
-
-            if(totalPages == currentPage)
-            {
-                e.HasMorePages = false;
-                RestoreValues();
-                MessageBox.Show("Ha finalizado la impresión de los rotulos");
-                return;
-            }
-
-            e.HasMorePages = true;
-            currentPage += 1;
-
         }
 
         private void doPrint()
         {
             pdConfirmLabel = new PrintDocument();
             PrinterSettings ps = new PrinterSettings();
-
-            this.totalPages = Convert.ToInt32(txtBoxQuantity.Text);
-            txtBoxQuantity.Enabled = false;
 
             pdConfirmLabel.PrinterSettings = ps;
             pdConfirmLabel.PrintPage += PrintPage;
@@ -347,21 +348,24 @@ namespace OrdersManagement.Desktop
             doPrint();
         }
 
-        private void RestoreValues() {
+        private void RestoreValues()
+        {
             lblVariant.Text = string.Empty;
             lblQuantity.Text = string.Empty;
             lblSize.Text = string.Empty;
             lblColor.Text = string.Empty;
             lblBarCode.Text = string.Empty;
             lblSKU.Text = string.Empty;
-            
-            txtBoxQuantity.Text = string.Empty;
-            txtBoxQuantity.Enabled = true;
+            lblPrintedQuantity.Text = string.Empty;
+            lblRealQuantity.Text = string.Empty;
 
             pnlPrinter.Visible = false;
-            this.currentPage = 0;
-            this.totalPages = 0;
             this.detailOrderID = 0;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            RestoreValues();
         }
 
         //TODO: 1- validar que la cantida de cajas a imprimir sea mayor a 0

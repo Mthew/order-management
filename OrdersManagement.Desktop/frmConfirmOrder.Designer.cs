@@ -28,11 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             panel2 = new Panel();
             dataGridView1 = new DataGridView();
+            Id = new DataGridViewTextBoxColumn();
+            BarCode = new DataGridViewTextBoxColumn();
+            OfNumber = new DataGridViewTextBoxColumn();
+            SKU = new DataGridViewTextBoxColumn();
+            RealQuantity = new DataGridViewTextBoxColumn();
+            PrintedQuantity = new DataGridViewTextBoxColumn();
+            confirmedQuantity = new DataGridViewTextBoxColumn();
+            Actions = new DataGridViewButtonColumn();
             label3 = new Label();
             panel1 = new Panel();
             button1 = new Button();
@@ -54,25 +62,21 @@
             lblBarCode = new Label();
             lblColor = new Label();
             lblSize = new Label();
+            lblPrintedQuantity = new Label();
+            lblRealQuantity = new Label();
             lblQuantity = new Label();
             label19 = new Label();
             label17 = new Label();
             label15 = new Label();
             lblVariant = new Label();
             label12 = new Label();
+            label8 = new Label();
+            label9 = new Label();
             label13 = new Label();
             label14 = new Label();
+            button5 = new Button();
             button2 = new Button();
-            label9 = new Label();
-            txtBoxQuantity = new TextBox();
             label6 = new Label();
-            Id = new DataGridViewTextBoxColumn();
-            BarCode = new DataGridViewTextBoxColumn();
-            OfNumber = new DataGridViewTextBoxColumn();
-            SKU = new DataGridViewTextBoxColumn();
-            RealQuantity = new DataGridViewTextBoxColumn();
-            confirmedQuantity = new DataGridViewTextBoxColumn();
-            Actions = new DataGridViewButtonColumn();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
@@ -87,49 +91,123 @@
             panel2.Location = new Point(14, 288);
             panel2.Margin = new Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(887, 387);
+            panel2.Size = new Size(1005, 387);
             panel2.TabIndex = 7;
             // 
             // dataGridView1
             // 
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = SystemColors.Control;
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Id, BarCode, OfNumber, SKU, RealQuantity, confirmedQuantity, Actions });
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = SystemColors.Window;
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle5.ForeColor = Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Id, BarCode, OfNumber, SKU, RealQuantity, PrintedQuantity, confirmedQuantity, Actions });
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             dataGridView1.Location = new Point(27, 68);
             dataGridView1.Margin = new Padding(3, 4, 3, 4);
             dataGridView1.MultiSelect = false;
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = SystemColors.Control;
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle6.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
-            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(839, 283);
+            dataGridView1.Size = new Size(963, 283);
             dataGridView1.TabIndex = 4;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // Id
+            // 
+            Id.DataPropertyName = "Id";
+            Id.HeaderText = "Identificator";
+            Id.MinimumWidth = 6;
+            Id.Name = "Id";
+            Id.ReadOnly = true;
+            Id.Visible = false;
+            Id.Width = 125;
+            // 
+            // BarCode
+            // 
+            BarCode.DataPropertyName = "BarCode";
+            BarCode.HeaderText = "Código de Barras";
+            BarCode.MinimumWidth = 6;
+            BarCode.Name = "BarCode";
+            BarCode.ReadOnly = true;
+            BarCode.Width = 125;
+            // 
+            // OfNumber
+            // 
+            OfNumber.DataPropertyName = "OfNumber";
+            OfNumber.HeaderText = "No. OF";
+            OfNumber.MinimumWidth = 6;
+            OfNumber.Name = "OfNumber";
+            OfNumber.ReadOnly = true;
+            OfNumber.Width = 125;
+            // 
+            // SKU
+            // 
+            SKU.DataPropertyName = "SKU";
+            SKU.HeaderText = "SKU";
+            SKU.MinimumWidth = 6;
+            SKU.Name = "SKU";
+            SKU.ReadOnly = true;
+            SKU.Width = 125;
+            // 
+            // RealQuantity
+            // 
+            RealQuantity.DataPropertyName = "RealQuantity";
+            RealQuantity.HeaderText = "Cantidad Real";
+            RealQuantity.MinimumWidth = 6;
+            RealQuantity.Name = "RealQuantity";
+            RealQuantity.ReadOnly = true;
+            RealQuantity.Width = 125;
+            // 
+            // PrintedQuantity
+            // 
+            PrintedQuantity.DataPropertyName = "PrintedQuantity";
+            PrintedQuantity.HeaderText = "Cantidad Impresa";
+            PrintedQuantity.MinimumWidth = 6;
+            PrintedQuantity.Name = "PrintedQuantity";
+            PrintedQuantity.ReadOnly = true;
+            PrintedQuantity.Width = 125;
+            // 
+            // confirmedQuantity
+            // 
+            confirmedQuantity.DataPropertyName = "ConfirmedQuantity";
+            confirmedQuantity.HeaderText = "Conteo Actual";
+            confirmedQuantity.MinimumWidth = 6;
+            confirmedQuantity.Name = "confirmedQuantity";
+            confirmedQuantity.ReadOnly = true;
+            confirmedQuantity.Width = 125;
+            // 
+            // Actions
+            // 
+            Actions.HeaderText = "Acciones";
+            Actions.MinimumWidth = 6;
+            Actions.Name = "Actions";
+            Actions.ReadOnly = true;
+            Actions.Text = "Imprimir Rotulo";
+            Actions.UseColumnTextForButtonValue = true;
+            Actions.Width = 125;
             // 
             // label3
             // 
@@ -147,7 +225,7 @@
             panel1.Controls.Add(button1);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(txtBarCode);
-            panel1.Location = new Point(14, 108);
+            panel1.Location = new Point(63, 108);
             panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
             panel1.Size = new Size(887, 133);
@@ -233,7 +311,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(13, 69);
+            label4.Location = new Point(62, 69);
             label4.Name = "label4";
             label4.Size = new Size(144, 20);
             label4.TabIndex = 2;
@@ -242,7 +320,7 @@
             // lblOrderNumber
             // 
             lblOrderNumber.AutoSize = true;
-            lblOrderNumber.Location = new Point(163, 69);
+            lblOrderNumber.Location = new Point(212, 69);
             lblOrderNumber.Name = "lblOrderNumber";
             lblOrderNumber.Size = new Size(21, 20);
             lblOrderNumber.TabIndex = 2;
@@ -252,7 +330,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(315, 69);
+            label5.Location = new Point(364, 69);
             label5.Name = "label5";
             label5.Size = new Size(180, 20);
             label5.TabIndex = 2;
@@ -261,7 +339,7 @@
             // lblOmNumber
             // 
             lblOmNumber.AutoSize = true;
-            lblOmNumber.Location = new Point(501, 69);
+            lblOmNumber.Location = new Point(550, 69);
             lblOmNumber.Name = "lblOmNumber";
             lblOmNumber.Size = new Size(21, 20);
             lblOmNumber.TabIndex = 2;
@@ -271,7 +349,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.Location = new Point(632, 69);
+            label7.Location = new Point(681, 69);
             label7.Name = "label7";
             label7.Size = new Size(75, 20);
             label7.TabIndex = 2;
@@ -280,7 +358,7 @@
             // lblGeneric
             // 
             lblGeneric.AutoSize = true;
-            lblGeneric.Location = new Point(713, 69);
+            lblGeneric.Location = new Point(762, 69);
             lblGeneric.Name = "lblGeneric";
             lblGeneric.Size = new Size(21, 20);
             lblGeneric.TabIndex = 2;
@@ -290,7 +368,7 @@
             // 
             lblStatus.AutoSize = true;
             lblStatus.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            lblStatus.Location = new Point(352, 245);
+            lblStatus.Location = new Point(401, 245);
             lblStatus.Name = "lblStatus";
             lblStatus.Size = new Size(21, 20);
             lblStatus.TabIndex = 2;
@@ -308,29 +386,31 @@
             pnlPrinter.Controls.Add(lblBarCode);
             pnlPrinter.Controls.Add(lblColor);
             pnlPrinter.Controls.Add(lblSize);
+            pnlPrinter.Controls.Add(lblPrintedQuantity);
+            pnlPrinter.Controls.Add(lblRealQuantity);
             pnlPrinter.Controls.Add(lblQuantity);
             pnlPrinter.Controls.Add(label19);
             pnlPrinter.Controls.Add(label17);
             pnlPrinter.Controls.Add(label15);
             pnlPrinter.Controls.Add(lblVariant);
             pnlPrinter.Controls.Add(label12);
+            pnlPrinter.Controls.Add(label8);
+            pnlPrinter.Controls.Add(label9);
             pnlPrinter.Controls.Add(label13);
             pnlPrinter.Controls.Add(label14);
+            pnlPrinter.Controls.Add(button5);
             pnlPrinter.Controls.Add(button2);
-            pnlPrinter.Controls.Add(label9);
-            pnlPrinter.Controls.Add(txtBoxQuantity);
             pnlPrinter.Controls.Add(label6);
-            pnlPrinter.Dock = DockStyle.Fill;
-            pnlPrinter.Location = new Point(0, 0);
+            pnlPrinter.Location = new Point(550, 217);
             pnlPrinter.Name = "pnlPrinter";
-            pnlPrinter.Size = new Size(914, 739);
+            pnlPrinter.Size = new Size(481, 385);
             pnlPrinter.TabIndex = 8;
             pnlPrinter.Visible = false;
             // 
             // lblSKU
             // 
             lblSKU.AutoSize = true;
-            lblSKU.Location = new Point(431, 356);
+            lblSKU.Location = new Point(461, 312);
             lblSKU.Name = "lblSKU";
             lblSKU.Size = new Size(21, 20);
             lblSKU.TabIndex = 10;
@@ -339,7 +419,7 @@
             // lblBarCode
             // 
             lblBarCode.AutoSize = true;
-            lblBarCode.Location = new Point(431, 308);
+            lblBarCode.Location = new Point(461, 264);
             lblBarCode.Name = "lblBarCode";
             lblBarCode.Size = new Size(21, 20);
             lblBarCode.TabIndex = 10;
@@ -348,7 +428,7 @@
             // lblColor
             // 
             lblColor.AutoSize = true;
-            lblColor.Location = new Point(431, 264);
+            lblColor.Location = new Point(461, 220);
             lblColor.Name = "lblColor";
             lblColor.Size = new Size(21, 20);
             lblColor.TabIndex = 10;
@@ -357,16 +437,34 @@
             // lblSize
             // 
             lblSize.AutoSize = true;
-            lblSize.Location = new Point(431, 221);
+            lblSize.Location = new Point(461, 177);
             lblSize.Name = "lblSize";
             lblSize.Size = new Size(21, 20);
             lblSize.TabIndex = 10;
             lblSize.Text = "--";
             // 
+            // lblPrintedQuantity
+            // 
+            lblPrintedQuantity.AutoSize = true;
+            lblPrintedQuantity.Location = new Point(461, 398);
+            lblPrintedQuantity.Name = "lblPrintedQuantity";
+            lblPrintedQuantity.Size = new Size(21, 20);
+            lblPrintedQuantity.TabIndex = 11;
+            lblPrintedQuantity.Text = "--";
+            // 
+            // lblRealQuantity
+            // 
+            lblRealQuantity.AutoSize = true;
+            lblRealQuantity.Location = new Point(461, 356);
+            lblRealQuantity.Name = "lblRealQuantity";
+            lblRealQuantity.Size = new Size(21, 20);
+            lblRealQuantity.TabIndex = 11;
+            lblRealQuantity.Text = "--";
+            // 
             // lblQuantity
             // 
             lblQuantity.AutoSize = true;
-            lblQuantity.Location = new Point(431, 177);
+            lblQuantity.Location = new Point(461, 442);
             lblQuantity.Name = "lblQuantity";
             lblQuantity.Size = new Size(21, 20);
             lblQuantity.TabIndex = 11;
@@ -376,7 +474,7 @@
             // 
             label19.AutoSize = true;
             label19.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label19.Location = new Point(285, 356);
+            label19.Location = new Point(285, 312);
             label19.Name = "label19";
             label19.Size = new Size(42, 20);
             label19.TabIndex = 13;
@@ -386,7 +484,7 @@
             // 
             label17.AutoSize = true;
             label17.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label17.Location = new Point(285, 308);
+            label17.Location = new Point(285, 264);
             label17.Name = "label17";
             label17.Size = new Size(128, 20);
             label17.TabIndex = 13;
@@ -396,7 +494,7 @@
             // 
             label15.AutoSize = true;
             label15.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label15.Location = new Point(285, 264);
+            label15.Location = new Point(285, 220);
             label15.Name = "label15";
             label15.Size = new Size(51, 20);
             label15.TabIndex = 13;
@@ -405,7 +503,7 @@
             // lblVariant
             // 
             lblVariant.AutoSize = true;
-            lblVariant.Location = new Point(431, 143);
+            lblVariant.Location = new Point(461, 134);
             lblVariant.Name = "lblVariant";
             lblVariant.Size = new Size(21, 20);
             lblVariant.TabIndex = 12;
@@ -415,21 +513,41 @@
             // 
             label12.AutoSize = true;
             label12.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label12.Location = new Point(285, 221);
+            label12.Location = new Point(285, 177);
             label12.Name = "label12";
             label12.Size = new Size(45, 20);
             label12.TabIndex = 13;
             label12.Text = "Talla:";
             // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.Location = new Point(285, 398);
+            label8.Name = "label8";
+            label8.Size = new Size(127, 20);
+            label8.TabIndex = 14;
+            label8.Text = "Catidad Impresa:";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label9.Location = new Point(285, 356);
+            label9.Name = "label9";
+            label9.Size = new Size(114, 20);
+            label9.TabIndex = 14;
+            label9.Text = "Cantidad Total:";
+            // 
             // label13
             // 
             label13.AutoSize = true;
             label13.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label13.Location = new Point(285, 177);
+            label13.Location = new Point(285, 442);
             label13.Name = "label13";
-            label13.Size = new Size(75, 20);
+            label13.Size = new Size(154, 20);
             label13.TabIndex = 14;
-            label13.Text = "Cantidad:";
+            label13.Text = "Cantidad a Imprimir:";
             // 
             // label14
             // 
@@ -441,37 +559,35 @@
             label14.TabIndex = 15;
             label14.Text = "Variante:";
             // 
+            // button5
+            // 
+            button5.BackColor = SystemColors.AppWorkspace;
+            button5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button5.ForeColor = Color.White;
+            button5.Location = new Point(285, 555);
+            button5.Margin = new Padding(3, 4, 3, 4);
+            button5.Name = "button5";
+            button5.Padding = new Padding(3, 4, 3, 4);
+            button5.Size = new Size(167, 40);
+            button5.TabIndex = 9;
+            button5.Text = "Cancelar";
+            button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
+            // 
             // button2
             // 
             button2.BackColor = SystemColors.MenuHighlight;
             button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             button2.ForeColor = Color.White;
-            button2.Location = new Point(323, 498);
+            button2.Location = new Point(475, 555);
             button2.Margin = new Padding(3, 4, 3, 4);
             button2.Name = "button2";
             button2.Padding = new Padding(3, 4, 3, 4);
-            button2.Size = new Size(199, 40);
+            button2.Size = new Size(189, 40);
             button2.TabIndex = 9;
             button2.Text = "Imprimir Rotulos";
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Location = new Point(285, 405);
-            label9.Name = "label9";
-            label9.Size = new Size(127, 20);
-            label9.TabIndex = 8;
-            label9.Text = "Cantidad de cajas";
-            // 
-            // txtBoxQuantity
-            // 
-            txtBoxQuantity.Location = new Point(285, 432);
-            txtBoxQuantity.Margin = new Padding(3, 4, 3, 4);
-            txtBoxQuantity.Name = "txtBoxQuantity";
-            txtBoxQuantity.Size = new Size(283, 27);
-            txtBoxQuantity.TabIndex = 7;
             // 
             // label6
             // 
@@ -487,77 +603,12 @@
             label6.Text = "DETALLES DE IMPRESIÓN";
             label6.Click += label6_Click;
             // 
-            // Id
-            // 
-            Id.DataPropertyName = "Id";
-            Id.HeaderText = "Identificator";
-            Id.MinimumWidth = 6;
-            Id.Name = "Id";
-            Id.ReadOnly = true;
-            Id.Visible = false;
-            Id.Width = 125;
-            // 
-            // BarCode
-            // 
-            BarCode.DataPropertyName = "BarCode";
-            BarCode.HeaderText = "Código de Barras";
-            BarCode.MinimumWidth = 6;
-            BarCode.Name = "BarCode";
-            BarCode.ReadOnly = true;
-            BarCode.Width = 125;
-            // 
-            // OfNumber
-            // 
-            OfNumber.DataPropertyName = "OfNumber";
-            OfNumber.HeaderText = "No. OF";
-            OfNumber.MinimumWidth = 6;
-            OfNumber.Name = "OfNumber";
-            OfNumber.ReadOnly = true;
-            OfNumber.Width = 125;
-            // 
-            // SKU
-            // 
-            SKU.DataPropertyName = "SKU";
-            SKU.HeaderText = "SKU";
-            SKU.MinimumWidth = 6;
-            SKU.Name = "SKU";
-            SKU.ReadOnly = true;
-            SKU.Width = 125;
-            // 
-            // RealQuantity
-            // 
-            RealQuantity.DataPropertyName = "RealQuantity";
-            RealQuantity.HeaderText = "Cantidad Real";
-            RealQuantity.MinimumWidth = 6;
-            RealQuantity.Name = "RealQuantity";
-            RealQuantity.ReadOnly = true;
-            RealQuantity.Width = 125;
-            // 
-            // confirmedQuantity
-            // 
-            confirmedQuantity.DataPropertyName = "ConfirmedQuantity";
-            confirmedQuantity.HeaderText = "Conteo Actual";
-            confirmedQuantity.MinimumWidth = 6;
-            confirmedQuantity.Name = "confirmedQuantity";
-            confirmedQuantity.ReadOnly = true;
-            confirmedQuantity.Width = 125;
-            // 
-            // Actions
-            // 
-            Actions.HeaderText = "Acciones";
-            Actions.MinimumWidth = 6;
-            Actions.Name = "Actions";
-            Actions.ReadOnly = true;
-            Actions.Text = "Imprimir Rotulo";
-            Actions.UseColumnTextForButtonValue = true;
-            Actions.Width = 125;
-            // 
             // frmConfirmOrder
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Plum;
-            ClientSize = new Size(914, 739);
+            ClientSize = new Size(1031, 739);
             Controls.Add(pnlPrinter);
             Controls.Add(panel2);
             Controls.Add(lblGeneric);
@@ -609,8 +660,6 @@
         private Panel pnlPrinter;
         private Label label6;
         private Button button2;
-        private Label label9;
-        private TextBox txtBoxQuantity;
         private Label lblSize;
         private Label lblQuantity;
         private Label lblVariant;
@@ -623,12 +672,18 @@
         private Label label19;
         private Label label17;
         private Label label15;
+        private Button button5;
+        private Label lblPrintedQuantity;
+        private Label label8;
         private DataGridViewTextBoxColumn Id;
         private DataGridViewTextBoxColumn BarCode;
         private DataGridViewTextBoxColumn OfNumber;
         private DataGridViewTextBoxColumn SKU;
         private DataGridViewTextBoxColumn RealQuantity;
+        private DataGridViewTextBoxColumn PrintedQuantity;
         private DataGridViewTextBoxColumn confirmedQuantity;
         private DataGridViewButtonColumn Actions;
+        private Label lblRealQuantity;
+        private Label label9;
     }
 }

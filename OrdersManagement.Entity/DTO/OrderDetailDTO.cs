@@ -27,5 +27,6 @@ namespace OrdersManagement.Entity.DTO
         public string OfNumber { get; set; } = null!;
 
         public int ConfirmedQuantity { get; set; }
+        public int PrintedQuantity { get; set; }
     }
 }

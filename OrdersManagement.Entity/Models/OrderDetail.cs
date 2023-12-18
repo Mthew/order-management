@@ -29,5 +29,11 @@ public partial class OrderDetail
 
     public int? ConfirmedQuantity { get; set; }
 
+    public int? PrintedQuantity { get; set; }
+
+    public string? Description { get; set; }
+
+    public decimal Price { get; set; }
+
     public virtual Order Order { get; set; } = null!;
 }

@@ -40,11 +40,11 @@ namespace OrdersManagement.Entity.Repository
 
         #region PUT
 
-        public void AddQuantity(string barcode, int quantity)
+        public void AddQuantity(int orderID, string barcode, int quantity)
         {
             using (DbOrdersContext db = new DbOrdersContext())
             {
-                OrderDetail item = db.OrderDetails.FirstOrDefault(x => x.BarCode.Equals(barcode))!;
+                OrderDetail item = db.OrderDetails.FirstOrDefault(x => x.OrderId.Equals(orderID) && x.BarCode.Equals(barcode))!;
 
                 if (item == null)
                 {
@@ -52,6 +52,24 @@ namespace OrdersManagement.Entity.Repository
                 }
 
                 item.ConfirmedQuantity += quantity;
+
+                db.SaveChanges();
+            }
+        }
+
+        public void AddQuantityPrinted(int orderID, string barcode)
+        {
+            using (DbOrdersContext db = new DbOrdersContext())
+            {
+                OrderDetail item = db.OrderDetails.FirstOrDefault(x => x.OrderId.Equals(orderID) && x.BarCode.Equals(barcode))!;
+
+                if (item == null)
+                {
+                    throw new Exception($"El código de barras {barcode}, no se encuntra ingresado en esta programación");
+                }
+
+                item.PrintedQuantity += item.ConfirmedQuantity;
+                item.ConfirmedQuantity = 0;
 
                 db.SaveChanges();
             }

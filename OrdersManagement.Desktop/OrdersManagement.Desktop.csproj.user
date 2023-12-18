@@ -15,6 +15,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Update="DataSets\BiilingAccountDataSet.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Update="ProgrammingDataSet.xsd">
       <SubType>Designer</SubType>
     </None>
