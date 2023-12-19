@@ -44,9 +44,11 @@
             panel1 = new Panel();
             button1 = new Button();
             label4 = new Label();
+            label15 = new Label();
             label5 = new Label();
             label2 = new Label();
             txtOmNumber = new TextBox();
+            txtCampaingNumber = new TextBox();
             txtGeneric = new TextBox();
             txtOrderNumber = new TextBox();
             label1 = new Label();
@@ -74,8 +76,10 @@
             label12 = new Label();
             txtBarCode = new TextBox();
             label6 = new Label();
-            txtCampaingNumber = new TextBox();
-            label15 = new Label();
+            label17 = new Label();
+            txtPrice = new TextBox();
+            label18 = new Label();
+            txtDescription = new TextBox();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
@@ -257,6 +261,15 @@
             label4.TabIndex = 2;
             label4.Text = "Número de Orden (OM)";
             // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Location = new Point(466, 117);
+            label15.Name = "label15";
+            label15.Size = new Size(72, 20);
+            label15.TabIndex = 2;
+            label15.Text = "Campaña";
+            // 
             // label5
             // 
             label5.AutoSize = true;
@@ -282,6 +295,14 @@
             txtOmNumber.Name = "txtOmNumber";
             txtOmNumber.Size = new Size(399, 27);
             txtOmNumber.TabIndex = 1;
+            // 
+            // txtCampaingNumber
+            // 
+            txtCampaingNumber.Location = new Point(466, 148);
+            txtCampaingNumber.Margin = new Padding(3, 4, 3, 4);
+            txtCampaingNumber.Name = "txtCampaingNumber";
+            txtCampaingNumber.Size = new Size(399, 27);
+            txtCampaingNumber.TabIndex = 1;
             // 
             // txtGeneric
             // 
@@ -332,10 +353,11 @@
             pnProgramming.BackColor = SystemColors.ActiveCaption;
             pnProgramming.Controls.Add(label13);
             pnProgramming.Controls.Add(gbProgramming);
-            pnProgramming.Location = new Point(408, 485);
+            pnProgramming.Dock = DockStyle.Fill;
+            pnProgramming.Location = new Point(0, 0);
             pnProgramming.Margin = new Padding(3, 4, 3, 4);
             pnProgramming.Name = "pnProgramming";
-            pnProgramming.Size = new Size(523, 306);
+            pnProgramming.Size = new Size(931, 791);
             pnProgramming.TabIndex = 9;
             pnProgramming.Visible = false;
             // 
@@ -365,12 +387,16 @@
             gbProgramming.Controls.Add(label16);
             gbProgramming.Controls.Add(label8);
             gbProgramming.Controls.Add(label10);
+            gbProgramming.Controls.Add(txtDescription);
             gbProgramming.Controls.Add(txtRealQuantity);
             gbProgramming.Controls.Add(txtSKU);
+            gbProgramming.Controls.Add(label18);
             gbProgramming.Controls.Add(txtColorCode);
             gbProgramming.Controls.Add(label14);
             gbProgramming.Controls.Add(label7);
+            gbProgramming.Controls.Add(txtPrice);
             gbProgramming.Controls.Add(label9);
+            gbProgramming.Controls.Add(label17);
             gbProgramming.Controls.Add(txtUmQuantity);
             gbProgramming.Controls.Add(label12);
             gbProgramming.Controls.Add(txtBarCode);
@@ -379,7 +405,7 @@
             gbProgramming.Margin = new Padding(3, 4, 3, 4);
             gbProgramming.Name = "gbProgramming";
             gbProgramming.Padding = new Padding(3, 4, 3, 4);
-            gbProgramming.Size = new Size(887, 367);
+            gbProgramming.Size = new Size(887, 491);
             gbProgramming.TabIndex = 10;
             gbProgramming.TabStop = false;
             gbProgramming.Text = "Programación";
@@ -397,7 +423,7 @@
             button5.BackColor = SystemColors.InactiveCaption;
             button5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             button5.ForeColor = System.Drawing.Color.Black;
-            button5.Location = new Point(512, 297);
+            button5.Location = new Point(512, 393);
             button5.Margin = new Padding(3, 4, 3, 4);
             button5.Name = "button5";
             button5.Padding = new Padding(3, 4, 3, 4);
@@ -429,7 +455,7 @@
             button4.BackColor = SystemColors.MenuText;
             button4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             button4.ForeColor = System.Drawing.Color.White;
-            button4.Location = new Point(649, 297);
+            button4.Location = new Point(649, 393);
             button4.Margin = new Padding(3, 4, 3, 4);
             button4.Name = "button4";
             button4.Padding = new Padding(3, 4, 3, 4);
@@ -567,22 +593,39 @@
             label6.TabIndex = 2;
             label6.Text = "Código de Barras";
             // 
-            // txtCampaingNumber
+            // label17
             // 
-            txtCampaingNumber.Location = new Point(466, 148);
-            txtCampaingNumber.Margin = new Padding(3, 4, 3, 4);
-            txtCampaingNumber.Name = "txtCampaingNumber";
-            txtCampaingNumber.Size = new Size(399, 27);
-            txtCampaingNumber.TabIndex = 1;
+            label17.AutoSize = true;
+            label17.Location = new Point(27, 293);
+            label17.Name = "label17";
+            label17.Size = new Size(106, 20);
+            label17.TabIndex = 2;
+            label17.Text = "Presio Unitario";
             // 
-            // label15
+            // txtPrice
             // 
-            label15.AutoSize = true;
-            label15.Location = new Point(466, 117);
-            label15.Name = "label15";
-            label15.Size = new Size(72, 20);
-            label15.TabIndex = 2;
-            label15.Text = "Campaña";
+            txtPrice.Location = new Point(27, 324);
+            txtPrice.Margin = new Padding(3, 4, 3, 4);
+            txtPrice.Name = "txtPrice";
+            txtPrice.Size = new Size(269, 27);
+            txtPrice.TabIndex = 1;
+            // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            label18.Location = new Point(311, 293);
+            label18.Name = "label18";
+            label18.Size = new Size(156, 20);
+            label18.TabIndex = 2;
+            label18.Text = "Descripción (Nombre)";
+            // 
+            // txtDescription
+            // 
+            txtDescription.Location = new Point(311, 324);
+            txtDescription.Margin = new Padding(3, 4, 3, 4);
+            txtDescription.Name = "txtDescription";
+            txtDescription.Size = new Size(269, 27);
+            txtDescription.TabIndex = 1;
             // 
             // frmOrder
             // 
@@ -660,5 +703,9 @@
         private Label label13;
         private Label label15;
         private TextBox txtCampaingNumber;
+        private TextBox txtDescription;
+        private Label label18;
+        private TextBox txtPrice;
+        private Label label17;
     }
 }

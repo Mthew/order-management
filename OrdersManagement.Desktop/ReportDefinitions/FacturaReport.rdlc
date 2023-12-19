@@ -103,7 +103,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox13</rd:DefaultName>
-        <Top>2.87304cm</Top>
+        <Top>2.83776cm</Top>
         <Left>0.2667cm</Left>
         <Height>0.6cm</Height>
         <Width>15.86111cm</Width>
@@ -214,7 +214,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox20</rd:DefaultName>
-        <Top>7.98661cm</Top>
+        <Top>7.95132cm</Top>
         <Left>0.47837cm</Left>
         <Height>5.426cm</Height>
         <Width>13.72327cm</Width>
@@ -1004,40 +1004,10 @@
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
           <Top>0.54187cm</Top>
-          <Left>11.9392cm</Left>
+          <Left>11.66403cm</Left>
           <Height>0.6cm</Height>
-          <Width>1.65333cm</Width>
+          <Width>1.9285cm</Width>
           <ZIndex>2</ZIndex>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-            <PaddingLeft>2pt</PaddingLeft>
-            <PaddingRight>2pt</PaddingRight>
-            <PaddingTop>2pt</PaddingTop>
-            <PaddingBottom>2pt</PaddingBottom>
-          </Style>
-        </Textbox>
-        <Textbox Name="Textbox4">
-          <CanGrow>true</CanGrow>
-          <KeepTogether>true</KeepTogether>
-          <Paragraphs>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>=First(Fields!campaignNumber.Value, "DetailTableDataSet")</Value>
-                  <Style />
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-          </Paragraphs>
-          <rd:DefaultName>Textbox2</rd:DefaultName>
-          <Top>0.54187cm</Top>
-          <Left>13.62781cm</Left>
-          <Height>0.6cm</Height>
-          <Width>2.5cm</Width>
-          <ZIndex>3</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -1068,8 +1038,8 @@
           <Top>1.23106cm</Top>
           <Left>5.69031cm</Left>
           <Height>0.6cm</Height>
-          <Width>4.00283cm</Width>
-          <ZIndex>4</ZIndex>
+          <Width>4.95533cm</Width>
+          <ZIndex>3</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -1096,10 +1066,10 @@
           </Paragraphs>
           <rd:DefaultName>Textbox2</rd:DefaultName>
           <Top>1.86633cm</Top>
-          <Left>6.44172cm</Left>
+          <Left>6.91798cm</Left>
           <Height>0.6cm</Height>
           <Width>2.5cm</Width>
-          <ZIndex>5</ZIndex>
+          <ZIndex>4</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -1162,10 +1132,40 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Top>2.64272cm</Top>
-          <Left>5.21406cm</Left>
+          <Top>2.60744cm</Top>
+          <Left>5.11881cm</Left>
           <Height>1.8065cm</Height>
-          <Width>4.95533cm</Width>
+          <Width>6.09833cm</Width>
+          <ZIndex>5</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox8">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=First(Fields!campaignNumber.Value, "DetailTableDataSet")</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox2</rd:DefaultName>
+          <Top>0.54187cm</Top>
+          <Left>13.62781cm</Left>
+          <Height>0.6cm</Height>
+          <Width>2.5cm</Width>
           <ZIndex>6</ZIndex>
           <Style>
             <Border>

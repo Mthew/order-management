@@ -401,9 +401,10 @@
             pnlPrinter.Controls.Add(button5);
             pnlPrinter.Controls.Add(button2);
             pnlPrinter.Controls.Add(label6);
-            pnlPrinter.Location = new Point(550, 217);
+            pnlPrinter.Dock = DockStyle.Fill;
+            pnlPrinter.Location = new Point(0, 0);
             pnlPrinter.Name = "pnlPrinter";
-            pnlPrinter.Size = new Size(481, 385);
+            pnlPrinter.Size = new Size(1031, 739);
             pnlPrinter.TabIndex = 8;
             pnlPrinter.Visible = false;
             // 

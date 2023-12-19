@@ -51,6 +51,7 @@ namespace OrdersManagement.Desktop
 
             adapter.ClearBeforeFill = true;
             DataSets.BiilingAccountDataSet.DataSet1DataTable dt = new DataSets.BiilingAccountDataSet.DataSet1DataTable();
+            
             adapter.Fill(dt, this.orderID);
 
             reportViewer1.RefreshReport();

@@ -60,6 +60,8 @@ namespace OrdersManagement.Desktop
             txtRealQuantity.Text = String.Empty;
             txtUmQuantity.Text = String.Empty;
             txtOfNumber.Text = String.Empty;
+            txtPrice.Text = String.Empty;
+            txtDescription.Text = String.Empty;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -81,6 +83,8 @@ namespace OrdersManagement.Desktop
             detail.RealQuantity = Convert.ToInt32(txtRealQuantity.Text);
             detail.UmQuantity = Convert.ToInt32(txtUmQuantity.Text);
             detail.OfNumber = txtOfNumber.Text;
+            detail.Description = txtDescription.Text;
+            detail.Price = Convert.ToDecimal(txtPrice.Text);
 
             details.Add(detail);
 

@@ -28,5 +28,9 @@ namespace OrdersManagement.Entity.DTO
 
         public int ConfirmedQuantity { get; set; }
         public int PrintedQuantity { get; set; }
+
+        public string? Description { get; set; }
+
+        public decimal Price { get; set; }
     }
 }

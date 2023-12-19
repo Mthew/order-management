@@ -232,10 +232,10 @@ namespace OrdersManagement.Desktop
             e.Graphics.DrawString(currentOrder.CampaignNumber, font, black, new RectangleF(510, 85 + aumentoY, heigthBox, 85), drawFormat);
 
             //Pedido de Compra
-            e.Graphics.DrawString(currentOrder.OrderNumber, font, black, new RectangleF(510, 280 + aumentoY, heigthBox, 110), drawFormat);
+            e.Graphics.DrawString(currentOrder.OmNumber, font, black, new RectangleF(510, 280 + aumentoY, heigthBox, 110), drawFormat);
 
-            //# De Factura
-            e.Graphics.DrawString(currentOrder.OmNumber, font, black, new RectangleF(510, 455 + aumentoY, heigthBox, 90), drawFormat);
+            //# De Factura => 2995 Aqui va un consecutivo
+            //e.Graphics.DrawString(currentOrder.OrderNumber, font, black, new RectangleF(510, 455 + aumentoY, heigthBox, 90), drawFormat);
 
             //Generico
             e.Graphics.DrawString(currentOrder.Generic, font, black, new RectangleF(440, 85 + aumentoY, heigthBox, 85), drawFormat);
