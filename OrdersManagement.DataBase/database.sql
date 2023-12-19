@@ -28,10 +28,19 @@ CREATE TABLE orderDetails (
 	size varchar(25) NOT NULL,
 	umQuantity int NOT NULL,
 	realQuantity int NOT NULL,
-	confirmedQuantity int default 0
+	confirmedQuantity int default 0,
+	printedQuantity int default 0,
+	[description] varchar(255),
+	price decimal(18,2) NOT NULL
 );
 
+ALTER TABLE orderDetails ADD printedQuantity int default 0;
+ALTER TABLE orderDetails ADD [description] varchar(255);
+ALTER TABLE orderDetails ADD price decimal(18,2) NOT NULL DEFAULT 0;
 
+
+UPDATE orderDetails SET printedQuantity = 0, confirmedQuantity = 0;
+UPDATE orderDetails SET [description] = 'Camiseta', price = 1997;
 
 
 INSERT INTO orders(orderNumber, omNumber, generic, orderState, campaignNumber) VALUES('4500088101','127901','25001368','0', '2023/08/NM');
@@ -44,6 +53,8 @@ INSERT INTO orderDetails(orderId, barCode, SKU, ofNumber, color, colorCode, vari
 SELECT * FROM orderDetails od
 	INNER JOIN orders o ON od.orderId = o.id
 WHERE od.id = 1
+
+
 
  --public string OrderNumber { get; set; } = null!;
 

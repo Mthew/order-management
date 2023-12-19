@@ -1,0 +1,15 @@
+C:\Users\ASUS\Documents\SourceCode\order-management\OrdersManagement.Entity\bin\Release\net6.0-windows\OrdersManagement.Entity.deps.json
+C:\Users\ASUS\Documents\SourceCode\order-management\OrdersManagement.Entity\bin\Release\net6.0-windows\OrdersManagement.Entity.runtimeconfig.json
+C:\Users\ASUS\Documents\SourceCode\order-management\OrdersManagement.Entity\bin\Release\net6.0-windows\OrdersManagement.Entity.dll
+C:\Users\ASUS\Documents\SourceCode\order-management\OrdersManagement.Entity\bin\Release\net6.0-windows\OrdersManagement.Entity.pdb
+C:\Users\ASUS\Documents\SourceCode\order-management\OrdersManagement.Entity\obj\Release\net6.0-windows\OrdersManagement.Entity.csproj.AssemblyReference.cache
+C:\Users\ASUS\Documents\SourceCode\order-management\OrdersManagement.Entity\obj\Release\net6.0-windows\OrdersManagement.Entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ASUS\Documents\SourceCode\order-management\OrdersManagement.Entity\obj\Release\net6.0-windows\OrdersManagement.Entity.AssemblyInfoInputs.cache
+C:\Users\ASUS\Documents\SourceCode\order-management\OrdersManagement.Entity\obj\Release\net6.0-windows\OrdersManagement.Entity.AssemblyInfo.cs
+C:\Users\ASUS\Documents\SourceCode\order-management\OrdersManagement.Entity\obj\Release\net6.0-windows\OrdersManagement.Entity.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Documents\SourceCode\order-management\OrdersManagement.Entity\obj\Release\net6.0-windows\OrdersManagement.Entity.sourcelink.json
+C:\Users\ASUS\Documents\SourceCode\order-management\OrdersManagement.Entity\obj\Release\net6.0-windows\OrdersManagement.Entity.dll
+C:\Users\ASUS\Documents\SourceCode\order-management\OrdersManagement.Entity\obj\Release\net6.0-windows\refint\OrdersManagement.Entity.dll
+C:\Users\ASUS\Documents\SourceCode\order-management\OrdersManagement.Entity\obj\Release\net6.0-windows\OrdersManagement.Entity.pdb
+C:\Users\ASUS\Documents\SourceCode\order-management\OrdersManagement.Entity\obj\Release\net6.0-windows\OrdersManagement.Entity.genruntimeconfig.cache
+C:\Users\ASUS\Documents\SourceCode\order-management\OrdersManagement.Entity\obj\Release\net6.0-windows\ref\OrdersManagement.Entity.dll
