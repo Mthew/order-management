@@ -25,34 +25,23 @@ namespace OrdersManagement.Desktop
 
         private void frmProgrammingLabel_Load(object sender, EventArgs e)
         {
-            //reportViewer1.LocalReport.ReportEmbeddedResource = "OrdersManagement.Desktop.ReportDefinitions.FacturaReport.rdlc";
-
-            //DataSets.BiilingAccountDataSet.DataSet1DataTable dt = new DataSets.BiilingAccountDataSet.DataSet1DataTable();
-            //adapter.Fill(dt, this.orderID);
-
-
-            //reportViewer1.RefreshReport();
-
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
 
             DataSets.BiilingAccountDataSet dataset = new DataSets.BiilingAccountDataSet();
 
+            DataSet1TableAdapter adapter = new DataSet1TableAdapter();
+
+            adapter.ClearBeforeFill = true;
+
             dataset.BeginInit();
 
             reportDataSource1.Name = "DetailTableDataSet";
-            reportDataSource1.Value = dataset.DataSet1;
+            reportDataSource1.Value = adapter.GetData(this.orderID);
             reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
 
             reportViewer1.LocalReport.ReportEmbeddedResource = "OrdersManagement.Desktop.ReportDefinitions.FacturaReport.rdlc";
 
             dataset.EndInit();
-
-            DataSet1TableAdapter adapter = new DataSet1TableAdapter();
-
-            adapter.ClearBeforeFill = true;
-            DataSets.BiilingAccountDataSet.DataSet1DataTable dt = new DataSets.BiilingAccountDataSet.DataSet1DataTable();
-            
-            adapter.Fill(dt, this.orderID);
 
             reportViewer1.RefreshReport();
         }

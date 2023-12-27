@@ -51,12 +51,20 @@ namespace OrdersManagement.Desktop
             if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
                 e.RowIndex >= 0)
             {
-
                 DataGridViewRow row = senderGrid.Rows[e.RowIndex];
-
                 int orderID = Convert.ToInt32(row.Cells["id"].Value);
-                gotoConfirmOrder(orderID);
 
+                if (e.ColumnIndex == dataGridView1.Columns["ConfirmOrder"].Index)
+                {
+                    gotoConfirmOrder(orderID);
+                    return;
+                }
+
+                if (e.ColumnIndex == dataGridView1.Columns["RemoveOrder"].Index)
+                {
+                    OrderDelete(orderID);
+                    return;
+                }
             }
         }
 
@@ -77,6 +85,16 @@ namespace OrdersManagement.Desktop
             frmOrder form = new frmOrder();
             form.Show();
             this.Hide();
+        }
+
+        public void OrderDelete(int orderId)
+        {
+            if (MessageBox.Show("¿Esta seguro de eliminar la orden?", "Eliminar Orden", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                repository.Remove(orderId);
+                Display();
+                MessageBox.Show("¡Orden Eliminada!");
+            }
         }
     }
 }

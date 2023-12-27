@@ -1,5 +1,5 @@
 ﻿namespace OrdersManagement.Desktop
-{
+{   
     partial class frmOrder
     {
         /// <summary>
@@ -66,20 +66,20 @@
             label16 = new Label();
             label8 = new Label();
             label10 = new Label();
+            txtDescription = new TextBox();
             txtRealQuantity = new TextBox();
             txtSKU = new TextBox();
+            label18 = new Label();
             txtColorCode = new TextBox();
             label14 = new Label();
             label7 = new Label();
+            txtPrice = new TextBox();
             label9 = new Label();
+            label17 = new Label();
             txtUmQuantity = new TextBox();
             label12 = new Label();
             txtBarCode = new TextBox();
             label6 = new Label();
-            label17 = new Label();
-            txtPrice = new TextBox();
-            label18 = new Label();
-            txtDescription = new TextBox();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
@@ -92,10 +92,10 @@
             panel2.BackColor = SystemColors.GradientActiveCaption;
             panel2.Controls.Add(dataGridView1);
             panel2.Controls.Add(label3);
-            panel2.Location = new Point(14, 338);
-            panel2.Margin = new Padding(3, 4, 3, 4);
+            panel2.Location = new Point(18, 422);
+            panel2.Margin = new Padding(4, 5, 4, 5);
             panel2.Name = "panel2";
-            panel2.Size = new Size(887, 369);
+            panel2.Size = new Size(1109, 461);
             panel2.TabIndex = 7;
             // 
             // dataGridView1
@@ -120,8 +120,8 @@
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
             dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            dataGridView1.Location = new Point(27, 68);
-            dataGridView1.Margin = new Padding(3, 4, 3, 4);
+            dataGridView1.Location = new Point(34, 85);
+            dataGridView1.Margin = new Padding(4, 5, 4, 5);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -134,7 +134,7 @@
             dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(839, 279);
+            dataGridView1.Size = new Size(1049, 349);
             dataGridView1.TabIndex = 4;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -198,9 +198,10 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(27, 20);
+            label3.Location = new Point(34, 25);
+            label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new Size(61, 20);
+            label3.Size = new Size(75, 25);
             label3.TabIndex = 2;
             label3.Text = "Pedidos";
             // 
@@ -209,11 +210,11 @@
             button2.BackColor = SystemColors.MenuHighlight;
             button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             button2.ForeColor = System.Drawing.Color.White;
-            button2.Location = new Point(447, 715);
-            button2.Margin = new Padding(3, 4, 3, 4);
+            button2.Location = new Point(559, 894);
+            button2.Margin = new Padding(4, 5, 4, 5);
             button2.Name = "button2";
-            button2.Padding = new Padding(3, 4, 3, 4);
-            button2.Size = new Size(126, 40);
+            button2.Padding = new Padding(4, 5, 4, 5);
+            button2.Size = new Size(158, 50);
             button2.TabIndex = 3;
             button2.Text = "Guardar Pedido";
             button2.UseVisualStyleBackColor = false;
@@ -231,10 +232,10 @@
             panel1.Controls.Add(txtCampaingNumber);
             panel1.Controls.Add(txtGeneric);
             panel1.Controls.Add(txtOrderNumber);
-            panel1.Location = new Point(14, 64);
-            panel1.Margin = new Padding(3, 4, 3, 4);
+            panel1.Location = new Point(18, 80);
+            panel1.Margin = new Padding(4, 5, 4, 5);
             panel1.Name = "panel1";
-            panel1.Size = new Size(887, 266);
+            panel1.Size = new Size(1109, 332);
             panel1.TabIndex = 6;
             // 
             // button1
@@ -242,11 +243,11 @@
             button1.BackColor = SystemColors.MenuText;
             button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             button1.ForeColor = System.Drawing.Color.White;
-            button1.Location = new Point(613, 205);
-            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Location = new Point(766, 256);
+            button1.Margin = new Padding(4, 5, 4, 5);
             button1.Name = "button1";
-            button1.Padding = new Padding(3, 4, 3, 4);
-            button1.Size = new Size(253, 40);
+            button1.Padding = new Padding(4, 5, 4, 5);
+            button1.Size = new Size(316, 50);
             button1.TabIndex = 3;
             button1.Text = "Agregar Programación";
             button1.UseVisualStyleBackColor = false;
@@ -255,69 +256,73 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(466, 35);
+            label4.Location = new Point(582, 44);
+            label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
-            label4.Size = new Size(167, 20);
+            label4.Size = new Size(202, 25);
             label4.TabIndex = 2;
             label4.Text = "Número de Orden (OM)";
             // 
             // label15
             // 
             label15.AutoSize = true;
-            label15.Location = new Point(466, 117);
+            label15.Location = new Point(582, 146);
+            label15.Margin = new Padding(4, 0, 4, 0);
             label15.Name = "label15";
-            label15.Size = new Size(72, 20);
+            label15.Size = new Size(87, 25);
             label15.TabIndex = 2;
             label15.Text = "Campaña";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(27, 117);
+            label5.Location = new Point(34, 146);
+            label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
-            label5.Size = new Size(68, 20);
+            label5.Size = new Size(81, 25);
             label5.TabIndex = 2;
             label5.Text = "Generico";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(27, 35);
+            label2.Location = new Point(34, 44);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(134, 20);
+            label2.Size = new Size(162, 25);
             label2.TabIndex = 2;
             label2.Text = "Número de Pedido";
             // 
             // txtOmNumber
             // 
-            txtOmNumber.Location = new Point(466, 65);
-            txtOmNumber.Margin = new Padding(3, 4, 3, 4);
+            txtOmNumber.Location = new Point(582, 81);
+            txtOmNumber.Margin = new Padding(4, 5, 4, 5);
             txtOmNumber.Name = "txtOmNumber";
-            txtOmNumber.Size = new Size(399, 27);
+            txtOmNumber.Size = new Size(498, 31);
             txtOmNumber.TabIndex = 1;
             // 
             // txtCampaingNumber
             // 
-            txtCampaingNumber.Location = new Point(466, 148);
-            txtCampaingNumber.Margin = new Padding(3, 4, 3, 4);
+            txtCampaingNumber.Location = new Point(582, 185);
+            txtCampaingNumber.Margin = new Padding(4, 5, 4, 5);
             txtCampaingNumber.Name = "txtCampaingNumber";
-            txtCampaingNumber.Size = new Size(399, 27);
+            txtCampaingNumber.Size = new Size(498, 31);
             txtCampaingNumber.TabIndex = 1;
             // 
             // txtGeneric
             // 
-            txtGeneric.Location = new Point(27, 148);
-            txtGeneric.Margin = new Padding(3, 4, 3, 4);
+            txtGeneric.Location = new Point(34, 185);
+            txtGeneric.Margin = new Padding(4, 5, 4, 5);
             txtGeneric.Name = "txtGeneric";
-            txtGeneric.Size = new Size(399, 27);
+            txtGeneric.Size = new Size(498, 31);
             txtGeneric.TabIndex = 1;
             // 
             // txtOrderNumber
             // 
-            txtOrderNumber.Location = new Point(27, 65);
-            txtOrderNumber.Margin = new Padding(3, 4, 3, 4);
+            txtOrderNumber.Location = new Point(34, 81);
+            txtOrderNumber.Margin = new Padding(4, 5, 4, 5);
             txtOrderNumber.Name = "txtOrderNumber";
-            txtOrderNumber.Size = new Size(399, 27);
+            txtOrderNumber.Size = new Size(498, 31);
             txtOrderNumber.TabIndex = 1;
             // 
             // label1
@@ -327,9 +332,10 @@
             label1.Cursor = Cursors.No;
             label1.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = System.Drawing.Color.Black;
-            label1.Location = new Point(14, 9);
+            label1.Location = new Point(18, 11);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(276, 37);
+            label1.Size = new Size(332, 43);
             label1.TabIndex = 5;
             label1.Text = "INGRESAR PEDIDO";
             // 
@@ -338,11 +344,11 @@
             button3.BackColor = SystemColors.InactiveCaption;
             button3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             button3.ForeColor = System.Drawing.Color.Black;
-            button3.Location = new Point(304, 715);
-            button3.Margin = new Padding(3, 4, 3, 4);
+            button3.Location = new Point(380, 894);
+            button3.Margin = new Padding(4, 5, 4, 5);
             button3.Name = "button3";
-            button3.Padding = new Padding(3, 4, 3, 4);
-            button3.Size = new Size(126, 40);
+            button3.Padding = new Padding(4, 5, 4, 5);
+            button3.Size = new Size(158, 50);
             button3.TabIndex = 8;
             button3.Text = "Cancelar";
             button3.UseVisualStyleBackColor = false;
@@ -355,9 +361,9 @@
             pnProgramming.Controls.Add(gbProgramming);
             pnProgramming.Dock = DockStyle.Fill;
             pnProgramming.Location = new Point(0, 0);
-            pnProgramming.Margin = new Padding(3, 4, 3, 4);
+            pnProgramming.Margin = new Padding(4, 5, 4, 5);
             pnProgramming.Name = "pnProgramming";
-            pnProgramming.Size = new Size(931, 791);
+            pnProgramming.Size = new Size(1164, 989);
             pnProgramming.TabIndex = 9;
             pnProgramming.Visible = false;
             // 
@@ -368,9 +374,10 @@
             label13.Cursor = Cursors.No;
             label13.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point);
             label13.ForeColor = System.Drawing.Color.Black;
-            label13.Location = new Point(22, 164);
+            label13.Location = new Point(28, 205);
+            label13.Margin = new Padding(4, 0, 4, 0);
             label13.Name = "label13";
-            label13.Size = new Size(419, 37);
+            label13.Size = new Size(507, 43);
             label13.TabIndex = 11;
             label13.Text = "AGREGAR PROGRAMACIÓN";
             // 
@@ -401,21 +408,21 @@
             gbProgramming.Controls.Add(label12);
             gbProgramming.Controls.Add(txtBarCode);
             gbProgramming.Controls.Add(label6);
-            gbProgramming.Location = new Point(22, 212);
-            gbProgramming.Margin = new Padding(3, 4, 3, 4);
+            gbProgramming.Location = new Point(28, 265);
+            gbProgramming.Margin = new Padding(4, 5, 4, 5);
             gbProgramming.Name = "gbProgramming";
-            gbProgramming.Padding = new Padding(3, 4, 3, 4);
-            gbProgramming.Size = new Size(887, 491);
+            gbProgramming.Padding = new Padding(4, 5, 4, 5);
+            gbProgramming.Size = new Size(1109, 614);
             gbProgramming.TabIndex = 10;
             gbProgramming.TabStop = false;
             gbProgramming.Text = "Programación";
             // 
             // txtSize
             // 
-            txtSize.Location = new Point(597, 152);
-            txtSize.Margin = new Padding(3, 4, 3, 4);
+            txtSize.Location = new Point(746, 190);
+            txtSize.Margin = new Padding(4, 5, 4, 5);
             txtSize.Name = "txtSize";
-            txtSize.Size = new Size(269, 27);
+            txtSize.Size = new Size(335, 31);
             txtSize.TabIndex = 1;
             // 
             // button5
@@ -423,11 +430,11 @@
             button5.BackColor = SystemColors.InactiveCaption;
             button5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             button5.ForeColor = System.Drawing.Color.Black;
-            button5.Location = new Point(512, 393);
-            button5.Margin = new Padding(3, 4, 3, 4);
+            button5.Location = new Point(640, 491);
+            button5.Margin = new Padding(4, 5, 4, 5);
             button5.Name = "button5";
-            button5.Padding = new Padding(3, 4, 3, 4);
-            button5.Size = new Size(126, 40);
+            button5.Padding = new Padding(4, 5, 4, 5);
+            button5.Size = new Size(158, 50);
             button5.TabIndex = 8;
             button5.Text = "Cancelar";
             button5.UseVisualStyleBackColor = false;
@@ -436,18 +443,19 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(597, 121);
+            label11.Location = new Point(746, 151);
+            label11.Margin = new Padding(4, 0, 4, 0);
             label11.Name = "label11";
-            label11.Size = new Size(39, 20);
+            label11.Size = new Size(45, 25);
             label11.TabIndex = 2;
             label11.Text = "Talla";
             // 
             // txtOfNumber
             // 
-            txtOfNumber.Location = new Point(597, 240);
-            txtOfNumber.Margin = new Padding(3, 4, 3, 4);
+            txtOfNumber.Location = new Point(746, 300);
+            txtOfNumber.Margin = new Padding(4, 5, 4, 5);
             txtOfNumber.Name = "txtOfNumber";
-            txtOfNumber.Size = new Size(269, 27);
+            txtOfNumber.Size = new Size(335, 31);
             txtOfNumber.TabIndex = 1;
             // 
             // button4
@@ -455,11 +463,11 @@
             button4.BackColor = SystemColors.MenuText;
             button4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             button4.ForeColor = System.Drawing.Color.White;
-            button4.Location = new Point(649, 393);
-            button4.Margin = new Padding(3, 4, 3, 4);
+            button4.Location = new Point(811, 491);
+            button4.Margin = new Padding(4, 5, 4, 5);
             button4.Name = "button4";
-            button4.Padding = new Padding(3, 4, 3, 4);
-            button4.Size = new Size(217, 40);
+            button4.Padding = new Padding(4, 5, 4, 5);
+            button4.Size = new Size(271, 50);
             button4.TabIndex = 3;
             button4.Text = "Agregar programación";
             button4.UseVisualStyleBackColor = false;
@@ -467,179 +475,189 @@
             // 
             // txtColor
             // 
-            txtColor.Location = new Point(597, 69);
-            txtColor.Margin = new Padding(3, 4, 3, 4);
+            txtColor.Location = new Point(746, 86);
+            txtColor.Margin = new Padding(4, 5, 4, 5);
             txtColor.Name = "txtColor";
-            txtColor.Size = new Size(269, 27);
+            txtColor.Size = new Size(335, 31);
             txtColor.TabIndex = 1;
             // 
             // txtVariant
             // 
-            txtVariant.Location = new Point(311, 152);
-            txtVariant.Margin = new Padding(3, 4, 3, 4);
+            txtVariant.Location = new Point(389, 190);
+            txtVariant.Margin = new Padding(4, 5, 4, 5);
             txtVariant.Name = "txtVariant";
-            txtVariant.Size = new Size(269, 27);
+            txtVariant.Size = new Size(335, 31);
             txtVariant.TabIndex = 1;
             // 
             // label16
             // 
             label16.AutoSize = true;
-            label16.Location = new Point(597, 209);
+            label16.Location = new Point(746, 261);
+            label16.Margin = new Padding(4, 0, 4, 0);
             label16.Name = "label16";
-            label16.Size = new Size(54, 20);
+            label16.Size = new Size(68, 25);
             label16.TabIndex = 2;
             label16.Text = "No. OF";
             // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(597, 39);
+            label8.Location = new Point(746, 49);
+            label8.Margin = new Padding(4, 0, 4, 0);
             label8.Name = "label8";
-            label8.Size = new Size(45, 20);
+            label8.Size = new Size(55, 25);
             label8.TabIndex = 2;
             label8.Text = "Color";
             // 
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(311, 121);
+            label10.Location = new Point(389, 151);
+            label10.Margin = new Padding(4, 0, 4, 0);
             label10.Name = "label10";
-            label10.Size = new Size(63, 20);
+            label10.Size = new Size(75, 25);
             label10.TabIndex = 2;
             label10.Text = "Variante";
             // 
+            // txtDescription
+            // 
+            txtDescription.Location = new Point(389, 405);
+            txtDescription.Margin = new Padding(4, 5, 4, 5);
+            txtDescription.Name = "txtDescription";
+            txtDescription.Size = new Size(335, 31);
+            txtDescription.TabIndex = 1;
+            // 
             // txtRealQuantity
             // 
-            txtRealQuantity.Location = new Point(311, 240);
-            txtRealQuantity.Margin = new Padding(3, 4, 3, 4);
+            txtRealQuantity.Location = new Point(389, 300);
+            txtRealQuantity.Margin = new Padding(4, 5, 4, 5);
             txtRealQuantity.Name = "txtRealQuantity";
-            txtRealQuantity.Size = new Size(269, 27);
+            txtRealQuantity.Size = new Size(335, 31);
             txtRealQuantity.TabIndex = 1;
             // 
             // txtSKU
             // 
-            txtSKU.Location = new Point(311, 69);
-            txtSKU.Margin = new Padding(3, 4, 3, 4);
+            txtSKU.Location = new Point(389, 86);
+            txtSKU.Margin = new Padding(4, 5, 4, 5);
             txtSKU.Name = "txtSKU";
-            txtSKU.Size = new Size(269, 27);
+            txtSKU.Size = new Size(335, 31);
             txtSKU.TabIndex = 1;
+            // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            label18.Location = new Point(389, 366);
+            label18.Margin = new Padding(4, 0, 4, 0);
+            label18.Name = "label18";
+            label18.Size = new Size(185, 25);
+            label18.TabIndex = 2;
+            label18.Text = "Descripción (Nombre)";
             // 
             // txtColorCode
             // 
-            txtColorCode.Location = new Point(27, 152);
-            txtColorCode.Margin = new Padding(3, 4, 3, 4);
+            txtColorCode.Location = new Point(34, 190);
+            txtColorCode.Margin = new Padding(4, 5, 4, 5);
             txtColorCode.Name = "txtColorCode";
-            txtColorCode.Size = new Size(269, 27);
+            txtColorCode.Size = new Size(335, 31);
             txtColorCode.TabIndex = 1;
             // 
             // label14
             // 
             label14.AutoSize = true;
-            label14.Location = new Point(311, 209);
+            label14.Location = new Point(389, 261);
+            label14.Margin = new Padding(4, 0, 4, 0);
             label14.Name = "label14";
-            label14.Size = new Size(102, 20);
+            label14.Size = new Size(120, 25);
             label14.TabIndex = 2;
             label14.Text = "Cantidad Real";
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(311, 39);
+            label7.Location = new Point(389, 49);
+            label7.Margin = new Padding(4, 0, 4, 0);
             label7.Name = "label7";
-            label7.Size = new Size(36, 20);
+            label7.Size = new Size(44, 25);
             label7.TabIndex = 2;
             label7.Text = "SKU";
+            // 
+            // txtPrice
+            // 
+            txtPrice.Location = new Point(34, 405);
+            txtPrice.Margin = new Padding(4, 5, 4, 5);
+            txtPrice.Name = "txtPrice";
+            txtPrice.Size = new Size(335, 31);
+            txtPrice.TabIndex = 1;
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(27, 121);
+            label9.Location = new Point(34, 151);
+            label9.Margin = new Padding(4, 0, 4, 0);
             label9.Name = "label9";
-            label9.Size = new Size(79, 20);
+            label9.Size = new Size(97, 25);
             label9.TabIndex = 2;
             label9.Text = "Cod. Color";
             // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.Location = new Point(34, 366);
+            label17.Margin = new Padding(4, 0, 4, 0);
+            label17.Name = "label17";
+            label17.Size = new Size(127, 25);
+            label17.TabIndex = 2;
+            label17.Text = "Presio Unitario";
+            // 
             // txtUmQuantity
             // 
-            txtUmQuantity.Location = new Point(27, 240);
-            txtUmQuantity.Margin = new Padding(3, 4, 3, 4);
+            txtUmQuantity.Location = new Point(34, 300);
+            txtUmQuantity.Margin = new Padding(4, 5, 4, 5);
             txtUmQuantity.Name = "txtUmQuantity";
-            txtUmQuantity.Size = new Size(269, 27);
+            txtUmQuantity.Size = new Size(335, 31);
             txtUmQuantity.TabIndex = 1;
             // 
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(27, 209);
+            label12.Location = new Point(34, 261);
+            label12.Margin = new Padding(4, 0, 4, 0);
             label12.Name = "label12";
-            label12.Size = new Size(98, 20);
+            label12.Size = new Size(118, 25);
             label12.TabIndex = 2;
             label12.Text = "Cantidad/UM";
             // 
             // txtBarCode
             // 
-            txtBarCode.Location = new Point(27, 69);
-            txtBarCode.Margin = new Padding(3, 4, 3, 4);
+            txtBarCode.Location = new Point(34, 86);
+            txtBarCode.Margin = new Padding(4, 5, 4, 5);
             txtBarCode.Name = "txtBarCode";
-            txtBarCode.Size = new Size(269, 27);
+            txtBarCode.Size = new Size(335, 31);
             txtBarCode.TabIndex = 1;
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(27, 39);
+            label6.Location = new Point(34, 49);
+            label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
-            label6.Size = new Size(124, 20);
+            label6.Size = new Size(149, 25);
             label6.TabIndex = 2;
             label6.Text = "Código de Barras";
             // 
-            // label17
-            // 
-            label17.AutoSize = true;
-            label17.Location = new Point(27, 293);
-            label17.Name = "label17";
-            label17.Size = new Size(106, 20);
-            label17.TabIndex = 2;
-            label17.Text = "Presio Unitario";
-            // 
-            // txtPrice
-            // 
-            txtPrice.Location = new Point(27, 324);
-            txtPrice.Margin = new Padding(3, 4, 3, 4);
-            txtPrice.Name = "txtPrice";
-            txtPrice.Size = new Size(269, 27);
-            txtPrice.TabIndex = 1;
-            // 
-            // label18
-            // 
-            label18.AutoSize = true;
-            label18.Location = new Point(311, 293);
-            label18.Name = "label18";
-            label18.Size = new Size(156, 20);
-            label18.TabIndex = 2;
-            label18.Text = "Descripción (Nombre)";
-            // 
-            // txtDescription
-            // 
-            txtDescription.Location = new Point(311, 324);
-            txtDescription.Margin = new Padding(3, 4, 3, 4);
-            txtDescription.Name = "txtDescription";
-            txtDescription.Size = new Size(269, 27);
-            txtDescription.TabIndex = 1;
-            // 
             // frmOrder
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.MenuHighlight;
-            ClientSize = new Size(931, 791);
+            ClientSize = new Size(1164, 989);
             Controls.Add(pnProgramming);
             Controls.Add(button3);
             Controls.Add(panel2);
             Controls.Add(button2);
             Controls.Add(panel1);
             Controls.Add(label1);
-            Margin = new Padding(3, 4, 3, 4);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "frmOrder";
             Text = "frmOrder";
             Load += frmOrder_Load;

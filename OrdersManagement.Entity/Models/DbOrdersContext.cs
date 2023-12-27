@@ -15,25 +15,45 @@ public partial class DbOrdersContext : DbContext
     {
     }
 
+    public virtual DbSet<BillAccount> BillAccounts { get; set; }
+
     public virtual DbSet<Order> Orders { get; set; }
 
     public virtual DbSet<OrderDetail> OrderDetails { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("server=.; database=db_orders; User ID=sa; Password=123; TrustServerCertificate=true");
+        => optionsBuilder.UseSqlServer("server=.; database=db_orders; User ID=ticketing; Password=654321; TrustServerCertificate=true");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.Entity<BillAccount>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__billAcco__3213E83FB7A9A402");
+
+            entity.ToTable("billAccount");
+
+            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.BillNumber).HasColumnName("billNumber");
+            entity.Property(e => e.CreatedAt)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("smalldatetime")
+                .HasColumnName("createdAt");
+            entity.Property(e => e.OrderId).HasColumnName("orderId");
+            entity.Property(e => e.Price)
+                .HasColumnType("decimal(18, 2)")
+                .HasColumnName("price");
+        });
+
         modelBuilder.Entity<Order>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__orders__3213E83F64B233B2");
+            entity.HasKey(e => e.Id).HasName("PK__orders__3213E83F3CC554A9");
 
             entity.ToTable("orders");
 
-            entity.HasIndex(e => e.OrderNumber, "UQ__orders__6296129F6FAFD835").IsUnique();
+            entity.HasIndex(e => e.OrderNumber, "UQ__orders__6296129F35A7FFF1").IsUnique();
 
-            entity.HasIndex(e => e.OmNumber, "UQ__orders__F6638CD653A76880").IsUnique();
+            entity.HasIndex(e => e.OmNumber, "UQ__orders__F6638CD628D18C6A").IsUnique();
 
             entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.CampaignNumber)
@@ -61,11 +81,11 @@ public partial class DbOrdersContext : DbContext
 
         modelBuilder.Entity<OrderDetail>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__orderDet__3213E83FF450BB28");
+            entity.HasKey(e => e.Id).HasName("PK__orderDet__3213E83F16B0C6B5");
 
             entity.ToTable("orderDetails");
 
-            entity.HasIndex(e => e.BarCode, "UQ__orderDet__38AAAA621C968DB0").IsUnique();
+            entity.HasIndex(e => e.BarCode, "UQ__orderDet__38AAAA624FE31FF8").IsUnique();
 
             entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.BarCode)
@@ -115,7 +135,7 @@ public partial class DbOrdersContext : DbContext
 
             entity.HasOne(d => d.Order).WithMany(p => p.OrderDetails)
                 .HasForeignKey(d => d.OrderId)
-                .HasConstraintName("FK__orderDeta__order__4F7CD00D");
+                .HasConstraintName("FK__orderDeta__order__3D5E1FD2");
         });
 
         OnModelCreatingPartial(modelBuilder);

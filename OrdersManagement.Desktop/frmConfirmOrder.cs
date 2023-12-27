@@ -118,6 +118,7 @@ namespace OrdersManagement.Desktop
             lblBarCode.Text = detailOrder.BarCode;
             lblSKU.Text = detailOrder.Sku;
             lblRealQuantity.Text = detailOrder.RealQuantity.ToString();
+            lblBillAccountNumber.Text = new BillAccountRepository().getLastbillAccountNumber().ToString();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -235,7 +236,7 @@ namespace OrdersManagement.Desktop
             e.Graphics.DrawString(currentOrder.OmNumber, font, black, new RectangleF(510, 280 + aumentoY, heigthBox, 110), drawFormat);
 
             //# De Factura => 2995 Aqui va un consecutivo
-            //e.Graphics.DrawString(currentOrder.OrderNumber, font, black, new RectangleF(510, 455 + aumentoY, heigthBox, 90), drawFormat);
+            e.Graphics.DrawString(new BillAccountRepository().getLastbillAccountNumber().ToString(), font, black, new RectangleF(510, 455 + aumentoY, heigthBox, 90), drawFormat);
 
             //Generico
             e.Graphics.DrawString(currentOrder.Generic, font, black, new RectangleF(440, 85 + aumentoY, heigthBox, 85), drawFormat);
@@ -368,9 +369,8 @@ namespace OrdersManagement.Desktop
             RestoreValues();
         }
 
-        //TODO: 1- validar que la cantida de cajas a imprimir sea mayor a 0
-        // 2- gestionar el tema de las paginas multiples
-        // 3- dividir la cantidad final entre la catidad de cajas, para hallar la cantdad de unidades por caja,
-        // // el residuo se deja en la ultima caja
+        //TODO: Crear un interface grafica para gestionar el ultimo numero de facturación
+        //lenar el datasource para imprimir el PDF de cuenta de cobro
+        //Convertir el total a string en la factura (orden de compra)
     }
 }

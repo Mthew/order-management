@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             label1 = new Label();
             txtSearcher = new TextBox();
             panel1 = new Panel();
@@ -44,7 +44,8 @@
             Generic = new DataGridViewTextBoxColumn();
             OrderState = new DataGridViewTextBoxColumn();
             CreatedAt = new DataGridViewTextBoxColumn();
-            Actions = new DataGridViewButtonColumn();
+            ConfirmOrder = new DataGridViewButtonColumn();
+            RemoveOrder = new DataGridViewButtonColumn();
             button2 = new Button();
             label3 = new Label();
             panel1.SuspendLayout();
@@ -61,7 +62,7 @@
             label1.ForeColor = Color.Black;
             label1.Location = new Point(12, 9);
             label1.Name = "label1";
-            label1.Size = new Size(311, 37);
+            label1.Size = new Size(371, 43);
             label1.TabIndex = 0;
             label1.Text = "TODOS LOS PEDIDOS";
             // 
@@ -69,7 +70,7 @@
             // 
             txtSearcher.Location = new Point(24, 56);
             txtSearcher.Name = "txtSearcher";
-            txtSearcher.Size = new Size(690, 27);
+            txtSearcher.Size = new Size(846, 31);
             txtSearcher.TabIndex = 1;
             // 
             // panel1
@@ -80,7 +81,7 @@
             panel1.Controls.Add(txtSearcher);
             panel1.Location = new Point(12, 50);
             panel1.Name = "panel1";
-            panel1.Size = new Size(854, 100);
+            panel1.Size = new Size(1004, 100);
             panel1.TabIndex = 2;
             // 
             // button1
@@ -88,10 +89,10 @@
             button1.BackColor = SystemColors.MenuHighlight;
             button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(720, 53);
+            button1.Location = new Point(876, 56);
             button1.Name = "button1";
             button1.Padding = new Padding(3);
-            button1.Size = new Size(110, 30);
+            button1.Size = new Size(110, 41);
             button1.TabIndex = 3;
             button1.Text = "Buscar";
             button1.UseVisualStyleBackColor = false;
@@ -102,9 +103,9 @@
             label2.AutoSize = true;
             label2.Location = new Point(24, 26);
             label2.Name = "label2";
-            label2.Size = new Size(104, 20);
+            label2.Size = new Size(398, 25);
             label2.TabIndex = 2;
-            label2.Text = "Buscar pedido";
+            label2.Text = "Buscar pedido (Número de orden, OM, generico)";
             // 
             // panel2
             // 
@@ -114,45 +115,45 @@
             panel2.Controls.Add(label3);
             panel2.Location = new Point(12, 156);
             panel2.Name = "panel2";
-            panel2.Size = new Size(854, 290);
+            panel2.Size = new Size(1004, 516);
             panel2.TabIndex = 4;
             // 
             // dataGridView1
             // 
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = SystemColors.Control;
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Id, OrderNumber, OmNumber, Generic, OrderState, CreatedAt, Actions });
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = SystemColors.Window;
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle5.ForeColor = Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Id, OrderNumber, OmNumber, Generic, OrderState, CreatedAt, ConfirmOrder, RemoveOrder });
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             dataGridView1.Location = new Point(24, 51);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = SystemColors.Control;
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle6.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
-            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(806, 212);
+            dataGridView1.Size = new Size(962, 447);
             dataGridView1.TabIndex = 4;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -218,26 +219,36 @@
             CreatedAt.ReadOnly = true;
             CreatedAt.Width = 125;
             // 
-            // Actions
+            // ConfirmOrder
             // 
-            Actions.Frozen = true;
-            Actions.HeaderText = "Acciones";
-            Actions.MinimumWidth = 6;
-            Actions.Name = "Actions";
-            Actions.ReadOnly = true;
-            Actions.Text = "Confirmar";
-            Actions.UseColumnTextForButtonValue = true;
-            Actions.Width = 125;
+            ConfirmOrder.Frozen = true;
+            ConfirmOrder.HeaderText = "Confirmar Orden";
+            ConfirmOrder.MinimumWidth = 6;
+            ConfirmOrder.Name = "ConfirmOrder";
+            ConfirmOrder.ReadOnly = true;
+            ConfirmOrder.Text = "Confirmar";
+            ConfirmOrder.UseColumnTextForButtonValue = true;
+            ConfirmOrder.Width = 125;
+            // 
+            // RemoveOrder
+            // 
+            RemoveOrder.HeaderText = "Eliminar Orden";
+            RemoveOrder.MinimumWidth = 8;
+            RemoveOrder.Name = "RemoveOrder";
+            RemoveOrder.ReadOnly = true;
+            RemoveOrder.Text = "Eliminar Orden";
+            RemoveOrder.UseColumnTextForButtonValue = true;
+            RemoveOrder.Width = 150;
             // 
             // button2
             // 
             button2.BackColor = SystemColors.MenuHighlight;
             button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             button2.ForeColor = Color.White;
-            button2.Location = new Point(720, 15);
+            button2.Location = new Point(876, 3);
             button2.Name = "button2";
             button2.Padding = new Padding(3);
-            button2.Size = new Size(110, 30);
+            button2.Size = new Size(110, 42);
             button2.TabIndex = 3;
             button2.Text = "Crear Pedido";
             button2.UseVisualStyleBackColor = false;
@@ -248,15 +259,15 @@
             label3.AutoSize = true;
             label3.Location = new Point(24, 15);
             label3.Name = "label3";
-            label3.Size = new Size(61, 20);
+            label3.Size = new Size(75, 25);
             label3.TabIndex = 2;
             label3.Text = "Pedidos";
             // 
             // Orders
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(879, 450);
+            ClientSize = new Size(1030, 684);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Controls.Add(label1);
@@ -291,6 +302,7 @@
         private DataGridViewTextBoxColumn Generic;
         private DataGridViewTextBoxColumn OrderState;
         private DataGridViewTextBoxColumn CreatedAt;
-        private DataGridViewButtonColumn Actions;
+        private DataGridViewButtonColumn ConfirmOrder;
+        private DataGridViewButtonColumn RemoveOrder;
     }
 }
