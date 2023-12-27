@@ -86,7 +86,7 @@ namespace OrdersManagement.Entity.Repository
             return new BillAccountDTO()
             {
                 Id = x.Id,
-                OrderId = x.OrderId,
+                OrderId = (int)x.OrderId!,
                 BillNumber = x.BillNumber,
                 CreatedAt = x.CreatedAt,
             };

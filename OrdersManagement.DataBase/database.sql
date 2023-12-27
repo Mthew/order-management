@@ -60,8 +60,8 @@ SELECT * FROM orderDetails;
 INSERT INTO orders(orderNumber, omNumber, generic, orderState, campaignNumber) VALUES('4500088101','127901','25001368','0', '2023/08/NM');
 
 INSERT INTO orderDetails(orderId, barCode, SKU, ofNumber, color, colorCode, variant, size, umQuantity, realQuantity, price) VALUES
-(3, '7703794910007', '677371', '10415694', 'PALO DE ROSA', 'pro_233', '25001368017', 'S', '51', '45', 0),
-(3, '7703794910014', '677372', '10415695', 'PALO DE ROSA', 'pro_233', '25001368018', 'M', '102', '88', 0);
+(1, '7703794910007', '677371', '10415694', 'PALO DE ROSA', 'pro_233', '25001368017', 'S', '51', '45', 0),
+(1, '7703794910014', '677372', '10415695', 'PALO DE ROSA', 'pro_233', '25001368018', 'M', '102', '88', 0);
 
 
 SELECT * FROM orderDetails od
@@ -71,7 +71,10 @@ WHERE od.id = 1
 select * from orders
 
 
-INSERT INTO billAccount(billNumber, price) values (2995, 0)
+INSERT INTO billAccount(billNumber, price) values (3021, 0)
+
+
+UPDATE billAccount SET billNumber = '3020' where id = 1
 
 select * from billAccount 
 
@@ -167,8 +170,7 @@ END
 
 
 
-
-CREATE PROCEDURE sp_CreateAndGetBillAccount(
+ALTER PROCEDURE sp_CreateAndGetBillAccount(
 	@orderID INT
 ) AS BEGIN
 
@@ -197,6 +199,7 @@ CREATE PROCEDURE sp_CreateAndGetBillAccount(
 		o.generic, 
 		o.orderState, 
 		o.created_at,
+		od.printedQuantity * od.price as totalUnit,
 		b.price as totalPrice,
 		dbo.fn_NumberToWords(b.price) as wordPrice
 	FROM orderDetails AS od 

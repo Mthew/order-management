@@ -925,7 +925,7 @@
   <Width>7.9407in</Width>
   <Page>
     <PageHeader>
-      <Height>4.70349cm</Height>
+      <Height>6.01582cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -1177,6 +1177,38 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
+        <Textbox Name="Textbox9">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=First(Fields!campaignNumber.Value, "DetailTableDataSet")</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox2</rd:DefaultName>
+          <Top>4.84575cm</Top>
+          <Left>0.47837cm</Left>
+          <Height>0.6cm</Height>
+          <Width>17.19102cm</Width>
+          <ZIndex>7</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
       </ReportItems>
       <Style>
         <Border>
@@ -1220,8 +1252,8 @@
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="orderId">
-          <DataField>orderId</DataField>
+        <Field Name="id">
+          <DataField>id</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="barCode">
@@ -1264,8 +1296,8 @@
           <DataField>confirmedQuantity</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="printedQuantity">
-          <DataField>printedQuantity</DataField>
+        <Field Name="orderId">
+          <DataField>orderId</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="orderNumber">
@@ -1274,10 +1306,6 @@
         </Field>
         <Field Name="omNumber">
           <DataField>omNumber</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="campaignNumber">
-          <DataField>campaignNumber</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="generic">
@@ -1292,34 +1320,22 @@
           <DataField>created_at</DataField>
           <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
-        <Field Name="id">
-          <DataField>id</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+        <Field Name="totalPrice">
+          <DataField>totalPrice</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
-        <Field Name="description">
-          <DataField>description</DataField>
+        <Field Name="wordPrice">
+          <DataField>wordPrice</DataField>
           <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="price">
-          <DataField>price</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-        <Field Name="Expr1">
-          <DataField>Expr1</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="totalUnit">
-          <DataField>totalUnit</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>BiilingAccountDataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\ASUS\Documents\SourceCode\order-management\OrdersManagement.Desktop\DataSets\BiilingAccountDataSet.xsd</rd:SchemaPath>
-        <rd:TableName>DataSet1</rd:TableName>
+        <rd:DataSetName>ProgrammingDataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\ASUS\Documents\SourceCode\order-management\OrdersManagement.Desktop\ProgrammingDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>DataTable1</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>DataSet1TableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>DataTable1TableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>

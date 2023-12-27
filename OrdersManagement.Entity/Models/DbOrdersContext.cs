@@ -23,13 +23,13 @@ public partial class DbOrdersContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("server=.; database=db_orders; User ID=ticketing; Password=654321; TrustServerCertificate=true");
+        => optionsBuilder.UseSqlServer("server=.; database=db_orders; User ID=sa; Password=123; TrustServerCertificate=true");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<BillAccount>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__billAcco__3213E83FB7A9A402");
+            entity.HasKey(e => e.Id).HasName("PK__billAcco__3213E83F05321063");
 
             entity.ToTable("billAccount");
 
@@ -47,13 +47,13 @@ public partial class DbOrdersContext : DbContext
 
         modelBuilder.Entity<Order>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__orders__3213E83F3CC554A9");
+            entity.HasKey(e => e.Id).HasName("PK__orders__3213E83F2A89A346");
 
             entity.ToTable("orders");
 
-            entity.HasIndex(e => e.OrderNumber, "UQ__orders__6296129F35A7FFF1").IsUnique();
+            entity.HasIndex(e => e.OrderNumber, "UQ__orders__6296129F4FD92B65").IsUnique();
 
-            entity.HasIndex(e => e.OmNumber, "UQ__orders__F6638CD628D18C6A").IsUnique();
+            entity.HasIndex(e => e.OmNumber, "UQ__orders__F6638CD6E18CB65A").IsUnique();
 
             entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.CampaignNumber)
@@ -81,11 +81,11 @@ public partial class DbOrdersContext : DbContext
 
         modelBuilder.Entity<OrderDetail>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__orderDet__3213E83F16B0C6B5");
+            entity.HasKey(e => e.Id).HasName("PK__orderDet__3213E83F1DD4DBC9");
 
             entity.ToTable("orderDetails");
 
-            entity.HasIndex(e => e.BarCode, "UQ__orderDet__38AAAA624FE31FF8").IsUnique();
+            entity.HasIndex(e => e.BarCode, "UQ__orderDet__38AAAA62B7C9529D").IsUnique();
 
             entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.BarCode)
@@ -135,7 +135,7 @@ public partial class DbOrdersContext : DbContext
 
             entity.HasOne(d => d.Order).WithMany(p => p.OrderDetails)
                 .HasForeignKey(d => d.OrderId)
-                .HasConstraintName("FK__orderDeta__order__3D5E1FD2");
+                .HasConstraintName("FK__orderDeta__order__4F7CD00D");
         });
 
         OnModelCreatingPartial(modelBuilder);
