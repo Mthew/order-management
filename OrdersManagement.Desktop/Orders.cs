@@ -24,6 +24,13 @@ namespace OrdersManagement.Desktop
         private void Orders_Load(object sender, EventArgs e)
         {
             this.Display();
+            loadLastBillAccountNumber();
+        }
+
+        private void loadLastBillAccountNumber()
+        {
+            int lastBillNumber = new BillAccountRepository().getLastbillAccountNumber();
+            txtBillingNumber.Text = lastBillNumber.ToString();
         }
 
         public void Display()
@@ -95,6 +102,20 @@ namespace OrdersManagement.Desktop
                 Display();
                 MessageBox.Show("¡Orden Eliminada!");
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if(txtBillingNumber.Text.Length == 0)
+            {
+                MessageBox.Show("Debe de indicar el numero de facturación actual");
+            }
+
+            int numero = Convert.ToInt32(txtBillingNumber.Text);
+
+            new BillAccountRepository().ModifyLastNumber(numero);
+
+            MessageBox.Show("Ultimo numero de facturación actualizado");
         }
     }
 }

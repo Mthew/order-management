@@ -48,9 +48,14 @@
             RemoveOrder = new DataGridViewButtonColumn();
             button2 = new Button();
             label3 = new Label();
+            panel3 = new Panel();
+            button3 = new Button();
+            label4 = new Label();
+            txtBillingNumber = new TextBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            panel3.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -79,7 +84,7 @@
             panel1.Controls.Add(button1);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(txtSearcher);
-            panel1.Location = new Point(12, 50);
+            panel1.Location = new Point(14, 197);
             panel1.Name = "panel1";
             panel1.Size = new Size(1004, 100);
             panel1.TabIndex = 2;
@@ -113,9 +118,9 @@
             panel2.Controls.Add(dataGridView1);
             panel2.Controls.Add(button2);
             panel2.Controls.Add(label3);
-            panel2.Location = new Point(12, 156);
+            panel2.Location = new Point(14, 303);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1004, 516);
+            panel2.Size = new Size(1004, 560);
             panel2.TabIndex = 4;
             // 
             // dataGridView1
@@ -153,7 +158,7 @@
             dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(962, 447);
+            dataGridView1.Size = new Size(962, 492);
             dataGridView1.TabIndex = 4;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -263,12 +268,54 @@
             label3.TabIndex = 2;
             label3.Text = "Pedidos";
             // 
+            // panel3
+            // 
+            panel3.BackColor = SystemColors.ActiveCaption;
+            panel3.Controls.Add(button3);
+            panel3.Controls.Add(label4);
+            panel3.Controls.Add(txtBillingNumber);
+            panel3.Location = new Point(14, 73);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(572, 100);
+            panel3.TabIndex = 2;
+            // 
+            // button3
+            // 
+            button3.BackColor = SystemColors.MenuHighlight;
+            button3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button3.ForeColor = Color.White;
+            button3.Location = new Point(440, 51);
+            button3.Name = "button3";
+            button3.Padding = new Padding(3);
+            button3.Size = new Size(110, 41);
+            button3.TabIndex = 3;
+            button3.Text = "Modificar";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(24, 17);
+            label4.Name = "label4";
+            label4.Size = new Size(249, 25);
+            label4.TabIndex = 2;
+            label4.Text = "Ultimo número de facturación";
+            // 
+            // txtBillingNumber
+            // 
+            txtBillingNumber.Location = new Point(24, 56);
+            txtBillingNumber.Name = "txtBillingNumber";
+            txtBillingNumber.Size = new Size(398, 31);
+            txtBillingNumber.TabIndex = 1;
+            // 
             // Orders
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1030, 684);
+            ClientSize = new Size(1030, 875);
             Controls.Add(panel2);
+            Controls.Add(panel3);
             Controls.Add(panel1);
             Controls.Add(label1);
             Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -281,6 +328,8 @@
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -304,5 +353,9 @@
         private DataGridViewTextBoxColumn CreatedAt;
         private DataGridViewButtonColumn ConfirmOrder;
         private DataGridViewButtonColumn RemoveOrder;
+        private Panel panel3;
+        private Button button3;
+        private Label label4;
+        private TextBox txtBillingNumber;
     }
 }

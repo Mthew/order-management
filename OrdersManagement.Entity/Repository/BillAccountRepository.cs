@@ -27,7 +27,13 @@ namespace OrdersManagement.Entity.Repository
         {
             using (var db = new DbOrdersContext())
             {
-                return db.BillAccounts.Max(x => x.BillNumber);
+                BillAccount? item = db.BillAccounts.FirstOrDefault(x => x.OrderId == null);
+
+                if (item == null)
+                {
+                    return 0000;
+                }
+                return item.BillNumber;
             }
         }
 
@@ -56,7 +62,27 @@ namespace OrdersManagement.Entity.Repository
 
         #region PUT
 
+        public void ModifyLastNumber(int billAccountNumber)
+        {
+            using (DbOrdersContext db = new DbOrdersContext())
+            {
+                BillAccount? item = db.BillAccounts.FirstOrDefault(x => x.OrderId == null);
 
+                if (item == null)
+                {
+                    item = new BillAccount();
+                    item.Price = 0;
+                    item.BillNumber = billAccountNumber;
+                    db.BillAccounts.Add(item);
+                }
+                else
+                {
+                    item.BillNumber = billAccountNumber;
+                }
+
+                db.SaveChanges();
+            }
+        }
 
 
 
