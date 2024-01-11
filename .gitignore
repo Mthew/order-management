@@ -1,3 +1,9 @@
+/.vs
+/OrdersManagement.Desktop/obj
+/OrdersManagement.Desktop/bin
+/OrdersManagement.Entity/obj
+/OrdersManagement.Entity/bin
+
 # Prerequisites
 *.d
 

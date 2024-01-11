@@ -3811,24 +3811,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\DesarolloMatipos5\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\ASUS\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DesarolloMatipos5\\Documents\\SourceCode\\order-management\\OrdersManagement.Desktop\\OrdersManagement.Desktop.csproj",
+      "projectUniqueName": "C:\\Users\\ASUS\\Documents\\SourceCode\\order-management\\OrdersManagement.Desktop\\OrdersManagement.Desktop.csproj",
       "projectName": "OrdersManagement.Desktop",
-      "projectPath": "C:\\Users\\DesarolloMatipos5\\Documents\\SourceCode\\order-management\\OrdersManagement.Desktop\\OrdersManagement.Desktop.csproj",
-      "packagesPath": "C:\\Users\\DesarolloMatipos5\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DesarolloMatipos5\\Documents\\SourceCode\\order-management\\OrdersManagement.Desktop\\obj\\",
+      "projectPath": "C:\\Users\\ASUS\\Documents\\SourceCode\\order-management\\OrdersManagement.Desktop\\OrdersManagement.Desktop.csproj",
+      "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ASUS\\Documents\\SourceCode\\order-management\\OrdersManagement.Desktop\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\DesarolloMatipos5\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3842,8 +3837,8 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\Users\\DesarolloMatipos5\\Documents\\SourceCode\\order-management\\OrdersManagement.Entity\\OrdersManagement.Entity.csproj": {
-              "projectPath": "C:\\Users\\DesarolloMatipos5\\Documents\\SourceCode\\order-management\\OrdersManagement.Entity\\OrdersManagement.Entity.csproj"
+            "C:\\Users\\ASUS\\Documents\\SourceCode\\order-management\\OrdersManagement.Entity\\OrdersManagement.Entity.csproj": {
+              "projectPath": "C:\\Users\\ASUS\\Documents\\SourceCode\\order-management\\OrdersManagement.Entity\\OrdersManagement.Entity.csproj"
             }
           }
         }

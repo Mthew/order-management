@@ -11,7 +11,7 @@ namespace OrdersManagement.Entity.Repository
         {
             using (DbOrdersContext db = new DbOrdersContext())
             {
-                return db.Orders.Select(x => OrderToDto(x)).ToList();
+                return db.Orders.OrderByDescending(x => x.Id).Select(x => OrderToDto(x)).ToList();
             }
         }
 
