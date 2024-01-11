@@ -168,17 +168,18 @@ END
 
 
 
-CREATE PROCEDURE sp_CreateAndGetBillAccount(
+ALTER PROCEDURE sp_CreateAndGetBillAccount(
 	@orderID INT
 ) AS BEGIN
 
---calcular presio de cuenta de cobro
-	DECLARE @price decimal(18,2) = (SELECT SUM(printedQuantity * price) FROM orderDetails WHERE orderID = @orderID),
-		@billAccountnumber int = (SELECT MAX(billNumber) + 1 FROM billAccount);
+	IF (SELECT COUNT(*) FROM billAccount WHERE orderId = @orderID) = 0 BEGIN
+	--calcular presio de cuenta de cobro
+		DECLARE @price decimal(18,2) = (SELECT SUM(printedQuantity * price) FROM orderDetails WHERE orderID = @orderID),
+			@billAccountnumber int = (SELECT MAX(billNumber) + 1 FROM billAccount);
 
---crear cuenta de cobro, insertar presio
-	INSERT INTO billAccount(orderId, billNumber, price) VALUES(@orderID, @billAccountnumber, @price);
-
+	--crear cuenta de cobro, insertar presio
+		INSERT INTO billAccount(orderId, billNumber, price) VALUES(@orderID, @billAccountnumber, @price);
+	END
 
 	SELECT od.id, 
 		od.barCode, 
