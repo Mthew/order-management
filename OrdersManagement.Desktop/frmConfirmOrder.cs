@@ -87,9 +87,9 @@ namespace OrdersManagement.Desktop
 
                 int realQuantity = Convert.ToInt32(row.Cells["RealQuantity"].Value);
 
-                if (confirmedQuantity == realQuantity)
+                if (confirmedQuantity > realQuantity)
                 {
-                    MessageBox.Show("¡La cantidad real y el conteo actual deben de ser iguales!");
+                    MessageBox.Show("¡El conteo es superior a la cantidad real!");
                     return;
                 }
 

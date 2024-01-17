@@ -14,6 +14,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = OrdersManagement.Desktop
-build_property.ProjectDir = C:\Users\ASUS\Documents\SourceCode\order-management\OrdersManagement.Desktop\
+build_property.ProjectDir = C:\Users\DesarolloMatipos5\Documents\SourceCode\order-management\OrdersManagement.Desktop\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
