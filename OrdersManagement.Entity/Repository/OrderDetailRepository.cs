@@ -51,6 +51,19 @@ namespace OrdersManagement.Entity.Repository
                     throw new Exception($"El código de barras {barcode}, no se encuntra ingresado en esta programación");
                 }
 
+
+                if (item.ConfirmedQuantity + quantity > item.RealQuantity)
+                {
+                    throw new Exception($"La programacion ya ha sido contada en su totalidad, proceda a imprimir");
+                }
+
+                if (item.PrintedQuantity >= item.RealQuantity)
+                {
+                    throw new Exception($"La programación ya fue impresa en su totalidad");
+                }
+
+
+
                 item.ConfirmedQuantity += quantity;
 
                 db.SaveChanges();
